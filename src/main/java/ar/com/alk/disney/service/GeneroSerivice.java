@@ -1,4 +1,4 @@
-package ar.com.alk.disney.services;
+package ar.com.alk.disney.service;
 
 public class GeneroSerivice {
     

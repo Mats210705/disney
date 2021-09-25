@@ -1,9 +1,13 @@
-package ar.com.alk.disney.entities;
+package ar.com.alk.disney.model.entity;
 
 import java.util.Date;
 import java.util.List;
 
-public class Pelicula {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name="Pintura")
+public class PeliculaoSerie {
     
     private Long peliculaId;
 

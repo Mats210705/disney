@@ -1,8 +1,15 @@
-package ar.com.alk.disney.entities;
+package ar.com.alk.disney.model.entity;
 
 import java.util.List;
+import javax.persistence.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name="genero")
 public class Genero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long generoId;
 
@@ -18,7 +25,7 @@ public class Genero {
         this.imagenUrl = imagenUrl;
     }
 
-    private List<Pelicula> pelicula;
+    private List<PeliculaoSerie> pelicula;
 
     public Long getGeneroId() {
         return generoId;
@@ -36,11 +43,11 @@ public class Genero {
         this.nombre = nombre;
     }
 
-    public List<Pelicula> getPelicula() {
+    public List<PeliculaoSerie> getPelicula() {
         return pelicula;
     }
 
-    public void setPelicula(List<Pelicula> pelicula) {
+    public void setPelicula(List<PeliculaoSerie> pelicula) {
         this.pelicula = pelicula;
     }
     

@@ -1,8 +1,19 @@
-package ar.com.alk.disney.entities;
+package ar.com.alk.disney.model.entity;
+
+import ar.com.alk.disney.model.entity.PeliculaoSerie;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="Personaje")
 public class Personaje {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long personajeId;
 
@@ -16,7 +27,7 @@ public class Personaje {
 
     private String historia;
 
-    private List<Pelicula> peliculas;
+    private List<PeliculaoSerie> peliculas;
 
     public Long getPersonajeId() {
         return personajeId;
@@ -66,11 +77,11 @@ public class Personaje {
         this.historia = historia;
     }
 
-    public List<Pelicula> getPeliculas() {
+    public List<PeliculaoSerie> getPeliculas() {
         return peliculas;
     }
 
-    public void setPeliculas(List<Pelicula> peliculas) {
+    public void setPeliculas(List<PeliculaoSerie> peliculas) {
         this.peliculas = peliculas;
     }
 
