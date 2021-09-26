@@ -1,13 +1,22 @@
 package ar.com.alk.disney.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.*;
+
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="genero")
-public class Genero {
+public class Genero implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
@@ -17,38 +26,10 @@ public class Genero {
 
     private String imagenUrl;
 
-    public String getImagenUrl() {
-        return imagenUrl;
-    }
-
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
-    }
-
-    private List<PeliculaoSerie> pelicula;
-
-    public Long getGeneroId() {
-        return generoId;
-    }
-
-    public void setGeneroId(Long generoId) {
-        this.generoId = generoId;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public List<PeliculaoSerie> getPelicula() {
-        return pelicula;
-    }
-
-    public void setPelicula(List<PeliculaoSerie> pelicula) {
-        this.pelicula = pelicula;
-    }
-    
+    @JsonBackReference
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable( name = "pelicula_serie_genero",
+            joinColumns = @JoinColumn(name = "genero_id"),
+            inverseJoinColumns = @JoinColumn(name = "pelicula_serie_id"))
+    private List<PeliculaoSerie> pelicula_serie;
 }

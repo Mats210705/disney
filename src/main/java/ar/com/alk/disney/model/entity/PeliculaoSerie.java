@@ -1,83 +1,41 @@
 package ar.com.alk.disney.model.entity;
 
+import lombok.*;
+
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-@Entity
-@Table(name="Pintura")
-public class PeliculaoSerie {
-    
-    private Long peliculaId;
+import javax.persistence.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@Entity
+@Table(name="pelicula_serie")
+public class PeliculaoSerie {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long pelicula_serie_id;
+
+    @Column(nullable = false)
     private String imagenUrl;
 
+    @Column(nullable = false)
     private String titulo;
 
+    @Column(nullable = false)
     private Date fechaDeCreacion;
 
+    @Column(nullable = false)
     private Integer calificacion;
     
-    private List<Personaje> personajes;
+    private List<Personaje> personaje;
 
-    private List<Genero> generos;
+    private List<Genero> genero;
 
-    public Long getPeliculaId() {
-        return peliculaId;
-    }
 
-    public void setPeliculaId(Long peliculaId) {
-        this.peliculaId = peliculaId;
-    }
-
-    public String getImagenUrl() {
-        return imagenUrl;
-    }
-
-    public void setImagenUrl(String imagenUrl) {
-        this.imagenUrl = imagenUrl;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Date getFechaDeCreacion() {
-        return fechaDeCreacion;
-    }
-
-    public void setFechaDeCreacion(Date fechaDeCreacion) {
-        this.fechaDeCreacion = fechaDeCreacion;
-    }
-
-    public Integer getCalificacion() {
-        return calificacion;
-    }
-
-    public void setCalificacion(Integer calificacion) {
-        this.calificacion = calificacion;
-    }
-
-    public List<Personaje> getPersonajes() {
-        return personajes;
-    }
-
-    public void setPersonajes(List<Personaje> personajes) {
-        this.personajes = personajes;
-    }
-
-    public List<Genero> getGeneros() {
-        return generos;
-    }
-
-    public void setGeneros(List<Genero> generos) {
-        this.generos = generos;
-    }
 
     
 }
