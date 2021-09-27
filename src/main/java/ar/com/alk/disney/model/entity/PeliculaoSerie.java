@@ -2,8 +2,12 @@ package ar.com.alk.disney.model.entity;
 
 import lombok.*;
 
+import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -14,10 +18,12 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name="pelicula_serie")
-public class PeliculaoSerie {
+public class PeliculaoSerie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long pelicula_serie_id;
+
+    @Column(name = "pelicula_serie_id")
+    private Long Id;
 
     @Column(nullable = false)
     private String imagenUrl;
@@ -25,15 +31,21 @@ public class PeliculaoSerie {
     @Column(nullable = false)
     private String titulo;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_creacion", nullable = false)
     private Date fechaDeCreacion;
 
-    @Column(nullable = false)
+    @Column(name= "calificacion", nullable = false)
     private Integer calificacion;
     
-    private List<Personaje> personaje;
 
-    private List<Genero> genero;
+
+    @ManyToMany(mappedBy = "pelicula_serie")
+    private Set<Personaje> personajes = new HashSet<>();
+
+    @ManyToMany(mappedBy = "pelicula_serie")
+    private Set<Genero> generos = new HashSet<>();
+
+
 
 
 

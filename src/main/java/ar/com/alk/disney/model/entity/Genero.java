@@ -20,13 +20,13 @@ public class Genero implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
-    private Long generoId;
+    private Long id;
 
     private String nombre;
 
     private String imagenUrl;
 
-    @JsonBackReference
+
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "genero_id"),
