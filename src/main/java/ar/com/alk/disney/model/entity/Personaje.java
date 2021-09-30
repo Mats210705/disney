@@ -2,6 +2,7 @@ package ar.com.alk.disney.model.entity;
 
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.List;
@@ -27,7 +28,7 @@ public class Personaje implements Serializable {
     private String historia;
 
 
-    @JsonBackReference
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_personaje",
             joinColumns = @JoinColumn(name = "personaje_id"),

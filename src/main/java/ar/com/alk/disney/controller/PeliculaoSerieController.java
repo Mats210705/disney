@@ -2,7 +2,7 @@ package ar.com.alk.disney.controller;
 
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
-import ar.com.alk.disney.service.PeliculaoSerieService;
+import ar.com.alk.disney.service.PeliculaoSerieServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/disney/peliculaoSerie")
+
 public class PeliculaoSerieController {
     @Autowired
-    private PeliculaoSerieServices peliculaoSerieServicesservices;
+    private PeliculaoSerieServices peliculaoSerieService;
 
     @PostMapping("/peliculaoSerie")
     public ResponseEntity<PeliculaoSerie>crearNew(@RequestBody PeliculaoSerie peliculaoserie){
@@ -22,7 +22,7 @@ public class PeliculaoSerieController {
 
     @GetMapping({ "/", "" })
     public ResponseEntity<List<PeliculaoSerieDTO>> ge{
-        return ResponseEntity.ok(service.getList());
+        return ResponseEntity.ok(services.getList());
     }
 
 
