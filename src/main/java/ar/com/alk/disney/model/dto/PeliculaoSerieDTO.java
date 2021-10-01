@@ -2,8 +2,9 @@ package ar.com.alk.disney.model.dto;
 
 import ar.com.alk.disney.model.entity.Personaje;
 import lombok.*;
-import sun.util.calendar.BaseCalendar;
+
 import javax.validation.constraints.NotBlank;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -14,19 +15,21 @@ import java.util.List;
 @ToString
 public class PeliculaoSerieDTO implements Serializable{
 
-    private Long id;
+private Long id;
+    @NotBlank(message = "Imagen es requerida")
     private String imagen;
-    @NotBlank(message = "is required")////ver error
+    @NotBlank(message = "Titulo es requerido")
     private String tituto;
+    @NotBlank(message = "Fecha de creación es requerida")
     private Date fechaDeCreacion;
-    private Integer Calificacion;
+
 
     List<PersonajeDTO>Personaje;
 
     List<GeneroDTO>Genero;
 
     public Boolean hasNullOrEmptyAttributes() {
-        return titulo == null || titulo.trim().isEmpty();
+        return tituto == null || tituto.trim().isEmpty();
     }
 
 
