@@ -29,15 +29,16 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
 
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<version>9.4.0.jre16</version>
+			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.26</version>
+			</dependency>
 
 
-		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
