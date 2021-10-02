@@ -1,5 +1,6 @@
 package ar.com.alk.disney.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import java.io.Serializable;
@@ -17,7 +18,7 @@ import javax.persistence.*;
 @Setter
 @ToString
 @Entity
-@Table(name="pelicula_serie")
+@Table(name = "pelicula_serie")
 public class PeliculaoSerie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +27,7 @@ public class PeliculaoSerie implements Serializable {
     private Long Id;
 
     @Column(nullable = false)
-    private String imagenUrl;
+    private String imagen;
 
     @Column(nullable = false)
     private String titulo;
@@ -34,22 +35,27 @@ public class PeliculaoSerie implements Serializable {
     @Column(name = "fecha_creacion", nullable = false)
     private Date fechaDeCreacion;
 
-    @Column(name= "calificacion", nullable = false)
+    @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
-    
 
 
-    @ManyToMany(mappedBy = "pelicula_serie")
-    private Set<Personaje> personajes = new HashSet<>();
+
 
     @ManyToMany(mappedBy = "pelicula_serie")
     private Set<Genero> generos = new HashSet<>();
 
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable( name = "pelicula_serie_personaje",
+            joinColumns = @JoinColumn(name = "pelicula_serie_id"),
+            inverseJoinColumns = @JoinColumn(name = "personaje_id"))
+    private List<Personaje> personaje;
 
-
-
-
-    
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable( name = "pelicula_serie_genero",
+            joinColumns = @JoinColumn(name = "pelicula_serie_id"),
+            inverseJoinColumns = @JoinColumn(name = "genero_id"))
+    private List<Genero> genero;
 }
 
 

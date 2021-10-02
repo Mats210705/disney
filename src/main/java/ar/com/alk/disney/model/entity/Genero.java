@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.persistence.*;
 
 import javax.persistence.Entity;
@@ -24,12 +26,9 @@ public class Genero implements Serializable {
     @Column(nullable = false, length = 30)
     private String nombre;
     @Column(nullable = false, length = 50)
-    private String imagenUrl;
+    private String imagen;
 
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable( name = "pelicula_serie_genero",
-            joinColumns = @JoinColumn(name = "genero_id"),
-            inverseJoinColumns = @JoinColumn(name = "pelicula_serie_id"))
-    private List<PeliculaoSerie> pelicula_serie;
+    @ManyToMany(mappedBy = "genero")
+    private Set<PeliculaoSerie> peliculaoSerie = new HashSet<>();
 }

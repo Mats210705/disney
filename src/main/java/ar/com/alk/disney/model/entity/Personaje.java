@@ -6,7 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 @AllArgsConstructor
@@ -32,18 +34,14 @@ public class Personaje implements Serializable {
     private float peso;
 
     @Column(nullable = false)
-    private String imagenUrl;
+    private String imagen;
 
     @Column(nullable = false)
     private String historia;
 
 
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable( name = "pelicula_serie_personaje",
-            joinColumns = @JoinColumn(name = "personaje_id"),
-            inverseJoinColumns = @JoinColumn(name = "pelicula_serie_id"))
-    private List<PeliculaoSerie> pelicula_serie;
+    @ManyToMany(mappedBy = "personaje")
+    private Set<PeliculaoSerie> peliculaoSerie = new HashSet<>();
 
 
     
