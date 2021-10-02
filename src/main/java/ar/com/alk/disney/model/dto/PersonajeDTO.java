@@ -2,6 +2,7 @@ package ar.com.alk.disney.model.dto;
 
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,11 +12,12 @@ import java.util.List;
 @Setter
 @ToString
 public class PersonajeDTO implements Serializable {
-    private Long id;
-    private String imagen;
-    private Integer edad;
-    private float peso;
-    private String historia;
 
-    List<PeliculaoSerieDTO> peliculaoSerie;
+    @NotBlank(message = "Imagen es requerida")
+    private String imagen;
+
+    @NotBlank(message = "Nombre es requerido")
+    private String nombre;
+
+
 }

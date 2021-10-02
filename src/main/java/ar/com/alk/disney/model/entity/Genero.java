@@ -21,9 +21,9 @@ public class Genero implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long id;
-
+    @Column(nullable = false, length = 30)
     private String nombre;
-
+    @Column(nullable = false, length = 50)
     private String imagenUrl;
 
 

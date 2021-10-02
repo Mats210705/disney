@@ -11,12 +11,11 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class GeneroDTO implements Serializable{
+public class GeneroDTO implements Serializable {
     private Long id;
-
+    private String nombre;
     private String imageUrl;
 
-    private String  nombre;
 
     public List<PeliculaoSerie> peliculaoSerie;
 

@@ -12,8 +12,13 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-@RestController
-@RequestMapping(value="peliculaoSeries")
+@RestController//@RestController es un controller especial en RESTful especificacion y equivale
+// a la suma de @Controller y @ResponseBody.
+@RequestMapping(value="peliculaoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
+ // con una petición http
+@CrossOrigin("*")//El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
+// la interacción entre un navegador y un servidor para manejar de forma segura las solicitudes HTTP de
+// origen cruzado
 
 public class PeliculaoSerieController {
     @Autowired

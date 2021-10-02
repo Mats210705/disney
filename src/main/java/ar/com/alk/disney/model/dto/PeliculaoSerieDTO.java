@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @ToString
 public class PeliculaoSerieDTO implements Serializable{
-
+//Mostrar los campos imagen, titulo, fecha de creacion
 private Long id;
     @NotBlank(message = "Imagen es requerida")
     private String imagen;
@@ -24,9 +24,6 @@ private Long id;
     private Date fechaDeCreacion;
 
 
-    List<PersonajeDTO>Personaje;
-
-    List<GeneroDTO>Genero;
 
     public Boolean hasNullOrEmptyAttributes() {
         return tituto == null || tituto.trim().isEmpty();
