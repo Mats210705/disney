@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BusinessLogicExceptionComponent {
+    //componente que crea las exepciones de logica de negocio.
     public RuntimeException getExceptionEntityNotFound(String entity, Long id) {
 
         EntityError entityError = new EntityError(

@@ -110,7 +110,7 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
 
         peliculaoSerieRepository.delete(peliculaoSerie);
-
+        //el mapper tranforma de entity a dto y de dto a entity
         PeliculaoSerieDTO peliculaoSerieDeleted = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
 
         return peliculaoSerieDeleted;

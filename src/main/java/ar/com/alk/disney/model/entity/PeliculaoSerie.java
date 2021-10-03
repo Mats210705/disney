@@ -40,10 +40,6 @@ public class PeliculaoSerie implements Serializable {
 
 
 
-
-    @ManyToMany(mappedBy = "pelicula_serie")
-    private Set<Genero> generos = new HashSet<>();
-
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_personaje",
@@ -51,6 +47,7 @@ public class PeliculaoSerie implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "personaje_id"))
     private List<Personaje> personaje;
 
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),

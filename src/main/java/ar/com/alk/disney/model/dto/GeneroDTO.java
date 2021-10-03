@@ -16,7 +16,7 @@ public class GeneroDTO implements Serializable {
     private String nombre;
     private String imageUrl;
 
-
+//ver manana gitignore
     public List<PeliculaoSerie> peliculaoSerie;
 
 }

@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 public class BusinessLogicException extends RuntimeException {
+    //clase que extiene de RuntimeException para lanzar una exepcion de logica de negocio.
     private String message;
     private HttpStatus httpStatus;
     private List<EntityError> entityErrors = new ArrayList<>();

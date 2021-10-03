@@ -16,6 +16,8 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class RestValidationExceptionHandler extends ResponseEntityExceptionHandler {
+    // clase de tipo Advice para la captura de las exepciones de modelo de negocio y
+    // dar una respuesta de tipo 400
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex,

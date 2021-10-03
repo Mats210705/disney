@@ -11,6 +11,7 @@ import lombok.Setter;
 @Setter
 
 public class EntityError {
+    //clase que contiene la informacion de una exepcion de logica de negocio.
     private String entity;
     private String message;
 }
