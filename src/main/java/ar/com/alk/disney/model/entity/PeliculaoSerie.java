@@ -2,6 +2,8 @@ package ar.com.alk.disney.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import net.bytebuddy.asm.Advice;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,11 +14,7 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
+
 @Entity
 @Table(name = "pelicula_serie")
 public class PeliculaoSerie implements Serializable {
@@ -33,7 +31,8 @@ public class PeliculaoSerie implements Serializable {
     private String titulo;
 
     @Column(name = "fecha_creacion", nullable = false)
-    private Date fechaDeCreacion;
+    @DateTimeFormat(pattern = "yyyy/MM/dd")
+    private LocalDate fechaDeCreacion;
 
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;

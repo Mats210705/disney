@@ -31,6 +31,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
     @Autowired
     private PeliculaoSerieRepository peliculaoSerieRepository;
 
+   //carga nuevo personaje
     @Override
     public PersonajeDTO createNew(PersonajeDTO dto) {
         return null;
@@ -39,16 +40,19 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
     //En el detalle deberán listarse todos los atributos del personaje, como así también sus películas o
     //series relacionadas
-   @Override
+
     public PersonajeDTO createNew(PersonajeDTO dto, Long id) {
 
         PeliculaoSerie peliculaoSerie = peliculaoSerieRepository
 
-                .findAllById(id)
-                .orElseThrow(()->logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
-        Personaje personajeToSave=PersonajeMapper.toEntity(dto,context);
+                .findById(id)
+                .orElseThrow(()->logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
+        Personaje personajeToSave=personajeMapper.toEntity(dto,context);
         personajeToSave.setPeliculaoSerie(peliculaoSerie);
-return
+        personajeRepository.save(personajeToSave);
+        PersonajeDTO personajeSaved= personajeMapper.toDTO(personajeToSave,context);
+        return personajeSaved;
+
 
 }
     public List<PersonajeDTO> getAll() {
@@ -74,10 +78,7 @@ return
 
     }
 
-    //@Override
-    public void mergeData(PersonajeDTO entity, PersonajeDTO dto) {
 
-    }
 
     @Override
     public PersonajeDTO update(PersonajeDTO dto, Long id) {

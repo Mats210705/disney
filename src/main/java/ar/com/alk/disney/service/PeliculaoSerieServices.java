@@ -97,8 +97,8 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
         if (dto.hasNullOrEmptyAttributes())
             throw logicExceptionComponent.getExceptionEntityEmptyValues("PeliculaoSerie");
 
-        if (!entity.getTitulo().equals(dto.getTituto()))
-            entity.setTitulo(dto.getTituto());
+        if (!entity.getimagen().equals(dto.getTituto()))
+            entity.setImagen(dto.getTituto());
 
 
     }
