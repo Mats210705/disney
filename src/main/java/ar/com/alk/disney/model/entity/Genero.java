@@ -30,5 +30,5 @@ public class Genero implements Serializable {
 
 
     @ManyToMany(mappedBy = "genero")
-    private Set<PeliculaoSerie> peliculaoSerie = new HashSet<>();
+    private Set<PeliculaoSerie> peliculaoSeries = new HashSet<>();
 }

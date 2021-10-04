@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 
-@RestController//@RestController es un controller especial en RESTful especificacion y equivale
+@RestController//@RestController es un controller especial en RESTful de especificacion y equivale
 // a la suma de @Controller y @ResponseBody.
 @RequestMapping(value="peliculaoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
  // con una petición http
@@ -59,7 +59,15 @@ public class PeliculaoSerieController {
                 .created(uri)
                 .body(newPelicualoSerie);
     }
+    @DeleteMapping({ "/{id}", "/{id}/" })
+    public ResponseEntity deletePeliculaoSerieByIdMethod(@PathVariable Long id){
 
+        peliculaoSerieServices.remove(id);
+
+        return ResponseEntity
+                .noContent()
+                .build();
+    }
 
 
 

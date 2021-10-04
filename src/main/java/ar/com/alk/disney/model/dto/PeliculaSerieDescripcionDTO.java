@@ -2,6 +2,7 @@ package ar.com.alk.disney.model.dto;
 
 import ar.com.alk.disney.model.entity.Genero;
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
+import ar.com.alk.disney.model.entity.Personaje;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,6 @@ public class PeliculaSerieDescripcionDTO {
     private String imagen;
     private Date fechaDeCreacion;
     private Integer calificacion;
-    private Set<PeliculaoSerie> peliculaoSerie;
+    private Set<Personaje> personajes;
     private Set<Genero>genero;
 }

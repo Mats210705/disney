@@ -20,7 +20,6 @@ import javax.persistence.*;
 public class PeliculaoSerie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name = "pelicula_serie_id")
     private Long Id;
 
@@ -31,8 +30,7 @@ public class PeliculaoSerie implements Serializable {
     private String titulo;
 
     @Column(name = "fecha_creacion", nullable = false)
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
-    private LocalDate fechaDeCreacion;
+    private Date fechaDeCreacion;
 
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
@@ -44,14 +42,14 @@ public class PeliculaoSerie implements Serializable {
     @JoinTable( name = "pelicula_serie_personaje",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
             inverseJoinColumns = @JoinColumn(name = "personaje_id"))
-    private List<Personaje> personaje;
+    private List<Personaje> personajes;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
             inverseJoinColumns = @JoinColumn(name = "genero_id"))
-    private List<Genero> genero;
+    private List<Genero> generos;
 }
 
 
