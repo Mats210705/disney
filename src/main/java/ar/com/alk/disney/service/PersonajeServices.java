@@ -48,7 +48,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
                 .findById(id)
                 .orElseThrow(()->logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
         Personaje personajeToSave=personajeMapper.toEntity(dto,context);
-        personajeToSave.setPeliculaoSerie(peliculaoSerie);
+        personajeToSave.setPeliculaoSeries(peliculaoSerie);//ver enlace
         personajeRepository.save(personajeToSave);
         PersonajeDTO personajeSaved= personajeMapper.toDTO(personajeToSave,context);
         return personajeSaved;

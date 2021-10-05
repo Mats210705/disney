@@ -24,5 +24,5 @@ public class PersonajePorPeliculaSerieDTO {
     private float peso;
     @NotBlank(message = "Historia es requerida")
     private String historia;
-    private Set<PeliculaoSerie> peliculaoSerieSet;
+    private Set<PeliculaoSerie> peliculaoSerie;
 }

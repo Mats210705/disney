@@ -1,25 +1,28 @@
 package ar.com.alk.disney.model.dto;
 
+import ar.com.alk.disney.model.entity.Genero;
+import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import ar.com.alk.disney.model.entity.Personaje;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
-
-import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
-public class PeliculaoSerieDTO implements Serializable{
-//Mostrar los campos imagen, titulo, fecha de creacion
-private Long id;
+//Deberá mostrar solamente los campos imagen, título y fecha de creación.
+public class PeliculaoSerieResumenDTO {
+    private Long id;
     @NotBlank(message = "Imagen es requerida")
     @Pattern(regexp = "http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?", message = "URL contiene caracteres invalidos")
     private String imagen;
@@ -33,20 +36,9 @@ private Long id;
     @PastOrPresent(message = "La fecha de creacion puede ser pasada o presente")
     private Date fechaDeCreacion;
 
-    @NotBlank(message = "La calificacion es requerido")
-    @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
-    private Integer calificacion;
-
-    private List<Personaje> personajes;
-
     public Boolean hasNullOrEmptyAttributes() {
         return imagen == null || imagen.trim().isEmpty()
                 || tituto == null || tituto.trim().isEmpty()
-                || fechaDeCreacion == null
-                || calificacion == null ;
-
+                || fechaDeCreacion == null;
     }
-
-
-
 }

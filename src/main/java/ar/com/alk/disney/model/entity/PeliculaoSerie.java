@@ -13,11 +13,17 @@ import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 
 @Entity
 @Table(name = "pelicula_serie")
+
+
 public class PeliculaoSerie implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pelicula_serie_id")
@@ -42,14 +48,14 @@ public class PeliculaoSerie implements Serializable {
     @JoinTable( name = "pelicula_serie_personaje",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
             inverseJoinColumns = @JoinColumn(name = "personaje_id"))
-    private List<Personaje> personajes;
+    private Set<Personaje> personajes;
 
     @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable( name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
             inverseJoinColumns = @JoinColumn(name = "genero_id"))
-    private List<Genero> generos;
+    private Set<Genero> generos;
 }
 
 

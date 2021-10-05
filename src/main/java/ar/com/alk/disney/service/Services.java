@@ -1,8 +1,9 @@
 package ar.com.alk.disney.service;
 
 import java.util.List;
-
-public interface Services<T, E> {
+//Inrterface: define contratos de metodos que deben implementarse
+// en las clases donde se extiende las interfaces.
+public interface Services<T, E> { //generic se indica que va a ser de algun tipo
     /**
      * @param dto//recibe
      * @return //retorna
