@@ -13,7 +13,8 @@ import java.io.Serializable;
 @Getter
 @Setter
 
-public class PersonajePresentacionDTO implements Serializable {
+public class PersonajeResumenDTO implements Serializable {
+    //El listado deberá mostrar: Imagen y nombre
 
     @NotBlank(message = "Imagen es requerida")
     private String imagen;

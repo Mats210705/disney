@@ -2,8 +2,7 @@ package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
-import ar.com.alk.disney.model.dto.PersonajeDTO;
-import ar.com.alk.disney.model.dto.PersonajeDescripcionDTO;
+
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import ar.com.alk.disney.model.entity.Personaje;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
@@ -45,7 +44,7 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
         PeliculaoSerie peliculaoSerieToSave = peliculaoSerieMapper.toEntity(dto, context);
 
-        peliculaoSerieToSave.setPersonajes(peliculaoSerieToSave.getPersonajes()); ///error
+        peliculaoSerieToSave.setPersonaje(personaje); ///error
 
         peliculaoSerieRepository.save(peliculaoSerieToSave);
 
@@ -55,14 +54,13 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
     }
     //listar todos
     @Override
-    public List<PersonajeDTO> getAll() {
+    public List<PeliculaoSerieDTO> getAll(){
         // llamar al repositorio y pedirle que haga la consulta a la BD de todos los registro de de esa entidad
         List<PeliculaoSerie> peliculaSerieList = peliculaoSerieRepository.findAll();// => select * from
 
         // convertir esa lista de DAO a una lista de DTO
-        List<PeliculaoSerieDTO> peliculaoSerieDTOS = peliculaoSerieMapper.toDTO(peliculaSerieList, context);
-        return peliculaoSerieDTOS;
-
+        List<PeliculaoSerieDTO> peliculasoseries = peliculaoSerieMapper.toDTO(peliculaSerieList, context);
+        return peliculasoseries;
     }
     //listar por Id
     @Override

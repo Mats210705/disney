@@ -16,7 +16,7 @@ import java.util.List;
 // a la suma de @Controller y @ResponseBody.
 @RequestMapping(value="peliculasoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
  // con una petición http
-@CrossOrigin("*")//El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
+ //El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
 // la interacción entre un navegador y un servidor para manejar de forma segura las solicitudes HTTP de
 // origen cruzado
 

@@ -1,6 +1,6 @@
 package ar.com.alk.disney.model.dto;
 
-import ar.com.alk.disney.model.entity.Personaje;
+;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 

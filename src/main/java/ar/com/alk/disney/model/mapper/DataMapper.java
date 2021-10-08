@@ -4,7 +4,7 @@ import org.mapstruct.Context;
 import org.mapstruct.InheritInverseConfiguration;
 
 import java.util.List;
-
+//para la capa de acceso a datos
 public interface DataMapper <D, E>{
     E toEntity(D dto, @Context AvoidingMappingContext context);
 

@@ -1,8 +1,6 @@
 package ar.com.alk.disney.model.dto;
 
-import ar.com.alk.disney.model.entity.Genero;
-import ar.com.alk.disney.model.entity.PeliculaoSerie;
-import ar.com.alk.disney.model.entity.Personaje;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
-import java.util.Set;
+
 
 @AllArgsConstructor
 @NoArgsConstructor

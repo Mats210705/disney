@@ -2,14 +2,14 @@ package ar.com.alk.disney.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import net.bytebuddy.asm.Advice;
-import org.springframework.format.annotation.DateTimeFormat;
+
+
 
 import java.io.Serializable;
-import java.time.LocalDate;
+
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
 
 import javax.persistence.*;

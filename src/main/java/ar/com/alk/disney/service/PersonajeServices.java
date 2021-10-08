@@ -46,7 +46,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
     }
 
 
-
+    //MOSTRAR
     public List<PersonajeDTO> getAll() {
         List<Personaje> personajeList = personajeRepository.findAll();
         //Basicamente el metodo .findAll() hace la query select * from
@@ -54,7 +54,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
         return personajeDTOS;
     }
-
+    //MOSTRAR POR ID
     @Override
     public PersonajeDTO getById(Long id) {
         Optional<Personaje> personajeOptional = personajeRepository.findById(id);
@@ -67,7 +67,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
         return personajeDTO;
     }
 
-
+    //MOSTRAR POR IMAGEN
     public PersonajeDTO getByImage(String imagen) {
         Optional<Personaje> personajeOptional = personajeRepository.findByImage (imagen);
 
@@ -78,7 +78,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
         return personajeDTO;
     }
-
+   //MOSTRAR POR NOMBRE
     public PersonajeDTO getByName(String nombre) {
         Optional<Personaje> personajeOptional= personajeRepository.findByName(nombre);
 
@@ -89,7 +89,7 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
         return personajeDTO;
     }
-
+   //ELIMINAR
     @Override
     public void remove(Long id) {
         Optional<Personaje>personajeByIdToDelete= personajeRepository.findById(id);
@@ -98,25 +98,25 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
         personajeRepository.deleteById(id);
 
     }
-
+   //MERGE
     @Override
     public void mergeData(Personaje entity, PersonajeDTO dto) {
         if (dto.hasNullOrEmptyAttributes())
-            throw logicExceptionComponent.getExceptionEntityEmptyValues("PeliculaoSerie");
+            throw logicExceptionComponent.getExceptionEntityEmptyValues("Personaje");
 
+        if (!entity.getNombre().equals(dto.getNombre()))
+            entity.setNombre(dto.getNombre());
+        if (!entity.getEdad().equals(dto.getEdad()))
+            entity.setEdad(dto.getEdad());
         if (!entity.getImagen().equals(dto.getImagen()))
             entity.setImagen(dto.getImagen());
-        if (!entity.getTitulo().equals(dto.getTituto()))
-            entity.setTitulo(dto.getTituto());
-        if (!entity.getFechaDeCreacion().equals(dto.getFechaDeCreacion()))
-            entity.setFechaDeCreacion(dto.getFechaDeCreacion());
-        if (!entity.getCalificacion().equals(dto.getCalificacion()))
-            entity.setCalificacion(dto.getCalificacion());
+        if (!entity.getHistoria().equals(dto.getHistoria()))
+            entity.setHistoria(dto.getHistoria());
 
 
     }
 
-
+   // ACTUALIZAR
     @Override
     public PersonajeDTO update(PersonajeDTO dto, Long id) {
         Optional<Personaje> personajeOptional = personajeRepository.findById(id);

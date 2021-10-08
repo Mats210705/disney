@@ -1,11 +1,13 @@
 package ar.com.alk.disney.service;
 
-import ar.com.alk.disney.model.dto.PersonajeDTO;
-import ar.com.alk.disney.model.dto.PersonajeDescripcionDTO;
+
+
 
 import java.util.List;
 //Inrterface: define contratos de metodos que deben implementarse
 // en las clases donde se extiende las interfaces.
+//service:permite que Spring reconozca a SampleService como servicio al escanear
+// los componentes de la aplicación.
 public interface Services<T, E> { //generic se indica que va a ser de algun tipo
     /**
      * @param dto//recibe
@@ -16,7 +18,7 @@ public interface Services<T, E> { //generic se indica que va a ser de algun tipo
     /**
      * @return
      */
-    List<PersonajeDTO> getAll(); //retorna la lista de la entidad
+    List<T> getAll(); //retorna la lista de la entidad
 
     /**
      * @param id

@@ -1,13 +1,11 @@
 package ar.com.alk.disney.model.entity;
 
-import ar.com.alk.disney.model.entity.PeliculaoSerie;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.List;
+
 import java.util.Set;
 
 import javax.persistence.*;
@@ -25,10 +23,10 @@ public class Personaje implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private Integer edad;
+    private String nombre;
 
     @Column(nullable = false)
-    private String nombre;
+    private Integer edad;
 
     @Column(nullable = false)
     private float peso;
