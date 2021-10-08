@@ -2,13 +2,11 @@ package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
 import ar.com.alk.disney.model.dto.GeneroDTO;
-import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
 import ar.com.alk.disney.model.dto.PersonajeDTO;
+import ar.com.alk.disney.model.dto.PersonajeDescripcionDTO;
 import ar.com.alk.disney.model.entity.Genero;
-import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
 import ar.com.alk.disney.model.mapper.GeneroMapper;
-import ar.com.alk.disney.model.mapper.PeliculaoSerieMapper;
 import ar.com.alk.disney.model.repository.GeneroRepository;
 import ar.com.alk.disney.model.repository.PeliculaoSerieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,27 +29,16 @@ public class GeneroServices implements Services<GeneroDTO, Genero> {
     private PeliculaoSerieRepository peliculaoSerieRepository;
 
 
-
-
-
-
-   @Override
-   public GeneroDTO createNew(GeneroDTO dto) {
-        return null;
-    }
-
-    public GeneroDTO createNew(GeneroDTO dto, Long id) {
-        Genero genero=generoRepository
-                .findById(id)
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Genero" , id));
-        Genero generoToSave=generoMapper.toEntity(dto,context);
-        generoToSave.setPeliculaoSeries(peliculaoSerie);
-
-        return generoToSave;
+    @Override
+    public GeneroDTO createNew(GeneroDTO dto) {
+        Genero genero= generoMapper.toEntity(dto, context);
+        generoRepository.save(genero);
+        GeneroDTO generoSaved = generoMapper.toDTO(genero, context);
+        return generoSaved;
     }
 
     @Override
-    public List<GeneroDTO> getAll() {
+    public List<PersonajeDTO> getAll() {
         return null;
     }
 

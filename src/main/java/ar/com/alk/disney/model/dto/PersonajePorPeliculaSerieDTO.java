@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class PersonajePorPeliculaSerieDTO {
+public class PersonajePorPeliculaSerieDTO implements Serializable {
     @NotBlank(message = "Nombre es requerido")
     private String nombre;
     @NotBlank(message = "Imagen es requerida")
@@ -24,5 +25,5 @@ public class PersonajePorPeliculaSerieDTO {
     private float peso;
     @NotBlank(message = "Historia es requerida")
     private String historia;
-    private Set<PeliculaoSerie> peliculaoSerie;
+    private Set<PeliculaoSerie> peliculaoSeries;
 }

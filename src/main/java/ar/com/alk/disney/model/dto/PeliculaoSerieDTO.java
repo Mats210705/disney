@@ -37,7 +37,7 @@ private Long id;
     @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
     private Integer calificacion;
 
-    private List<Personaje> personajes;
+
 
     public Boolean hasNullOrEmptyAttributes() {
         return imagen == null || imagen.trim().isEmpty()

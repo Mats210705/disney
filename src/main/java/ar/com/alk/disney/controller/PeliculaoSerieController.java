@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController//@RestController es un controller especial en RESTful de especificacion y equivale
 // a la suma de @Controller y @ResponseBody.
-@RequestMapping(value="peliculaoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
+@RequestMapping(value="peliculasoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
  // con una petición http
 @CrossOrigin("*")//El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
 // la interacción entre un navegador y un servidor para manejar de forma segura las solicitudes HTTP de
@@ -27,14 +27,14 @@ public class PeliculaoSerieController {
 
 
     @GetMapping({ "/", "" })
-    public ResponseEntity getPeliculaoSerieMethod() {
+    public ResponseEntity getPeliculasoSeriesMethod() {
         // se llama al servicio y se le pide el listado de peliculas y series
-        List<PeliculaoSerieDTO> peliculaoSeries = peliculaoSerieServices.getAll();
+        List<PeliculaoSerieDTO> peliculasoSeries = peliculaoSerieServices.getAll();
 
         // se crea el response request
         return ResponseEntity
                 .ok()
-                .body(peliculaoSeries);
+                .body(peliculasoSeries);
     }
 
     @GetMapping({ "/{id}", "/{id}/" })

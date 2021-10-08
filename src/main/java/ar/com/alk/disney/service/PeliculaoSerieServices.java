@@ -2,10 +2,14 @@ package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
+import ar.com.alk.disney.model.dto.PersonajeDTO;
+import ar.com.alk.disney.model.dto.PersonajeDescripcionDTO;
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
+import ar.com.alk.disney.model.entity.Personaje;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
 import ar.com.alk.disney.model.mapper.PeliculaoSerieMapper;
 import ar.com.alk.disney.model.repository.PeliculaoSerieRepository;
+import ar.com.alk.disney.model.repository.PersonajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,25 +28,34 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
     private AvoidingMappingContext context;
     @Autowired
     private PeliculaoSerieRepository peliculaoSerieRepository;
+    @Autowired
+    private PersonajeRepository personajeRepository;
+
+    @Override
+    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto){
+        return null;
+    }
 
    //creacion
-    @Autowired
-    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto) {
-        // debo hacer la conversion de dto a entity
-        PeliculaoSerie peliculaoSerie = peliculaoSerieMapper.toEntity(dto, context);
 
-        // se le pide al repository que guarde la entidad
-        peliculaoSerieRepository.save(peliculaoSerie);
+    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto, Long id) {
+        Personaje personaje = personajeRepository
+                .findById(id)
+                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
 
-        // convierte a dto las instancia peliculaoserie con el id que le asigno SqlServer
-        PeliculaoSerieDTO peliculaoserieSaved = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
+        PeliculaoSerie peliculaoSerieToSave = peliculaoSerieMapper.toEntity(dto, context);
 
-        // le entrego al controlador el dto con el id
-        return peliculaoserieSaved;
+        peliculaoSerieToSave.setPersonajes(peliculaoSerieToSave.getPersonajes()); ///error
+
+        peliculaoSerieRepository.save(peliculaoSerieToSave);
+
+        PeliculaoSerieDTO peliculaoSerieSaved = peliculaoSerieMapper.toDTO(peliculaoSerieToSave, context);
+
+        return peliculaoSerieSaved;
     }
     //listar todos
     @Override
-    public List<PeliculaoSerieDTO> getAll() {
+    public List<PersonajeDTO> getAll() {
         // llamar al repositorio y pedirle que haga la consulta a la BD de todos los registro de de esa entidad
         List<PeliculaoSerie> peliculaSerieList = peliculaoSerieRepository.findAll();// => select * from
 

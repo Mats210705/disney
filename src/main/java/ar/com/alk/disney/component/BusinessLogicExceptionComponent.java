@@ -22,6 +22,7 @@ public class BusinessLogicExceptionComponent {
         );
     }
 
+
     public RuntimeException getExceptionEntityEmptyValues(String entity) {
 
         EntityError entityError = new EntityError(

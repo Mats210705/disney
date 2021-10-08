@@ -17,7 +17,7 @@ public class GeneroDTO implements Serializable {
     private String imageUrl;
 
 
-    public List<PeliculaoSerie> peliculaoSerie;
+    public List<PeliculaoSerie> pelicula_serie;
 
 }
 

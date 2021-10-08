@@ -40,9 +40,12 @@ public class Personaje implements Serializable {
     private String historia;
 
 
-    @ManyToMany(mappedBy = "personaje")
-    private Set<PeliculaoSerie> peliculaoSeries = new HashSet<>();;
 
 
-    
+    @ManyToMany(mappedBy = "personaje", fetch = FetchType.LAZY)
+    private Set<PeliculaoSerie> peliculasoSeries= new HashSet<>();
+
+
+
+
 }
