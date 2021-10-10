@@ -1,7 +1,7 @@
 package ar.com.alk.disney.model.mapper.converter;
 
 import javax.persistence.AttributeConverter;
-import javax.persistence.Convert;
+
 import javax.persistence.Converter;
 import java.time.Year;
 

@@ -1,7 +1,9 @@
 package ar.com.alk.disney.model.dto;
 
 ;
+import ar.com.alk.disney.model.entity.Personaje;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -11,14 +13,14 @@ import javax.validation.constraints.Pattern;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
 public class PeliculaoSerieDTO implements Serializable{
-//Mostrar los campos imagen, titulo, fecha de creacion
+
 private Long id;
     @NotBlank(message = "Imagen es requerida")
     @Pattern(regexp = "http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?", message = "URL contiene caracteres invalidos")
@@ -36,6 +38,8 @@ private Long id;
     @NotBlank(message = "La calificacion es requerido")
     @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
     private Integer calificacion;
+   private Long personajeid;
+   private Long generoid;
 
 
 

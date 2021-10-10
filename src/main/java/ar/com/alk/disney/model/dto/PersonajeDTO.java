@@ -3,10 +3,12 @@ package ar.com.alk.disney.model.dto;
 
 import lombok.*;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
 import java.io.Serializable;
-import java.util.Set;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,8 +23,8 @@ public class PersonajeDTO implements Serializable {
     private String imagen;
     @NotBlank(message = "Edad es requerida")
     private Integer edad;
-    @NotBlank(message = "Peso es requerido")
-    private float peso;
+    @NotNull(message = "Peso es requerido")
+    private Float peso;
     @NotBlank(message = "Historia es requerida")
     private String historia;
 
@@ -30,7 +32,7 @@ public class PersonajeDTO implements Serializable {
         return nombre == null || nombre.trim().isEmpty()
                 || imagen == null || imagen.trim().isEmpty()
                 || edad == null
-
+                 || peso==null
                 || historia == null || historia.trim().isEmpty();
 
     }

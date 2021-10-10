@@ -4,8 +4,10 @@ package ar.com.alk.disney.model.entity;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
 
+import java.util.List;
 import java.util.Set;
 import javax.persistence.*;
 
@@ -29,6 +31,6 @@ public class Genero implements Serializable {
     private String imagen;
 
 
-    @ManyToMany(mappedBy = "genero")
-    private Set<PeliculaoSerie> peliculasoSeries = new HashSet<>();
+    @ManyToMany(mappedBy = "generos")
+    public List<PeliculaoSerie> peliculasoseries = new ArrayList<>();
 }

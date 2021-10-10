@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -108,6 +109,8 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
             entity.setNombre(dto.getNombre());
         if (!entity.getEdad().equals(dto.getEdad()))
             entity.setEdad(dto.getEdad());
+        if (!Objects.equals(entity.getPeso(), dto.getPeso()))
+            entity.setPeso(dto.getPeso());
         if (!entity.getImagen().equals(dto.getImagen()))
             entity.setImagen(dto.getImagen());
         if (!entity.getHistoria().equals(dto.getHistoria()))

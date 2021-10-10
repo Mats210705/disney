@@ -4,8 +4,10 @@ package ar.com.alk.disney.model.entity;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -40,8 +42,9 @@ public class Personaje implements Serializable {
 
 
 
-    @ManyToMany(mappedBy = "personaje", fetch = FetchType.LAZY)
-    private Set<PeliculaoSerie> peliculasoSeries= new HashSet<>();
+
+    @ManyToMany(mappedBy = "personajes")
+    public List<PeliculaoSerie> peliculasoseries = new ArrayList<>();
 
 
 

@@ -7,10 +7,7 @@ import lombok.*;
 
 import java.io.Serializable;
 
-import java.util.Date;
-import java.util.HashSet;
-
-import java.util.Set;
+import java.util.*;
 
 import javax.persistence.*;
 @AllArgsConstructor
@@ -41,22 +38,34 @@ public class PeliculaoSerie implements Serializable {
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
 
-
-
-
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable( name = "pelicula_serie_personaje",
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
-            inverseJoinColumns = @JoinColumn(name = "personaje_id"))
-    private Set<Personaje> personajes = new HashSet<>();
+            inverseJoinColumns = @JoinColumn(name = "personaje_id")
+    )
+    private List<Personaje> personajes = new ArrayList<>();
 
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable( name = "pelicula_serie_genero",
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name = "pelicula_serie_genero",
             joinColumns = @JoinColumn(name = "pelicula_serie_id"),
-            inverseJoinColumns = @JoinColumn(name = "genero_id"))
-    private Set<Genero> generos = new HashSet<>();
+            inverseJoinColumns = @JoinColumn(name = "genero_id")
+    )
+    private List<Genero> generos = new ArrayList<>();
+
+    public void addPersonaje(Personaje personaje) {
+        personajes.add(personaje);
+        personaje.getPeliculasoseries().add(this);
+    }
+    public void removePersonaje(Personaje personaje) {
+        personajes.remove(personaje);
+       personaje.getPeliculasoseries().remove(this);
+    }
 }
 
 

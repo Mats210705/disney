@@ -1,9 +1,12 @@
 package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
+import ar.com.alk.disney.model.dto.GeneroDTO;
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
 
+import ar.com.alk.disney.model.entity.Genero;
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
+
 import ar.com.alk.disney.model.entity.Personaje;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
 import ar.com.alk.disney.model.mapper.PeliculaoSerieMapper;
@@ -12,8 +15,8 @@ import ar.com.alk.disney.model.repository.PersonajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+
 
 @Service
 public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, PeliculaoSerie> {
@@ -29,6 +32,8 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
     private PeliculaoSerieRepository peliculaoSerieRepository;
     @Autowired
     private PersonajeRepository personajeRepository;
+    @Autowired
+    private PersonajeRepository generoRepository;
 
     @Override
     public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto){
@@ -37,20 +42,12 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
    //creacion
 
-    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto, Long id) {
-        Personaje personaje = personajeRepository
-                .findById(id)
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
+    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto ) {
 
-        PeliculaoSerie peliculaoSerieToSave = peliculaoSerieMapper.toEntity(dto, context);
+    return  null;
 
-        peliculaoSerieToSave.setPersonaje(personaje); ///error
 
-        peliculaoSerieRepository.save(peliculaoSerieToSave);
 
-        PeliculaoSerieDTO peliculaoSerieSaved = peliculaoSerieMapper.toDTO(peliculaoSerieToSave, context);
-
-        return peliculaoSerieSaved;
     }
     //listar todos
     @Override
