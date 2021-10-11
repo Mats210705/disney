@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 
-
 import java.io.Serializable;
 
 import java.util.*;
 
 import javax.persistence.*;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -22,7 +22,7 @@ import javax.persistence.*;
 public class PeliculaoSerie implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "pelicula_serie_id")
     private Long Id;
 
@@ -58,14 +58,7 @@ public class PeliculaoSerie implements Serializable {
     )
     private List<Genero> generos = new ArrayList<>();
 
-    public void addPersonaje(Personaje personaje) {
-        personajes.add(personaje);
-        personaje.getPeliculasoseries().add(this);
-    }
-    public void removePersonaje(Personaje personaje) {
-        personajes.remove(personaje);
-       personaje.getPeliculasoseries().remove(this);
-    }
+
 }
 
 

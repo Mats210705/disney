@@ -22,7 +22,7 @@ import javax.persistence.Table;
 @Table(name="genero")
 public class Genero implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     
     private Long id;
     @Column(nullable = false, length = 30)
@@ -33,4 +33,12 @@ public class Genero implements Serializable {
 
     @ManyToMany(mappedBy = "generos")
     public List<PeliculaoSerie> peliculasoseries = new ArrayList<>();
+
+    public void addPeliculaoSerie(PeliculaoSerie pais) {
+        this.peliculasoseries.add(pais);
+    }
+
+    public void removePeliculaoSerie(PeliculaoSerie peliculaoSerie) {
+        this.peliculasoseries.remove(peliculaoSerie);
+    }
 }

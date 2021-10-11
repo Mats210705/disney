@@ -4,6 +4,7 @@ import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
 import ar.com.alk.disney.model.dto.GeneroDTO;
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
 
+import ar.com.alk.disney.model.dto.PeliculaoSerieResumenDTO;
 import ar.com.alk.disney.model.entity.Genero;
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
 
@@ -14,6 +15,7 @@ import ar.com.alk.disney.model.repository.PeliculaoSerieRepository;
 import ar.com.alk.disney.model.repository.PersonajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 
@@ -42,11 +44,22 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
    //creacion
 
-    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto ) {
 
-    return  null;
+    public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto, Long id ) {
+        List<Personaje> personajes = new ArrayList<>();
+       // Personaje personaje = personajeRepository
+          //      .findById(id)
+           //     .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
 
+        PeliculaoSerie peliculaoSerieToSave = peliculaoSerieMapper.toEntity(dto, context);
 
+        peliculaoSerieToSave.setPersonajes(personajes);
+
+        peliculaoSerieRepository.save(peliculaoSerieToSave);
+
+        PeliculaoSerieDTO peliculaoserieSaved = peliculaoSerieMapper.toDTO(peliculaoSerieToSave, context);
+
+          return peliculaoserieSaved;
 
     }
     //listar todos
@@ -58,6 +71,24 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
         // convertir esa lista de DAO a una lista de DTO
         List<PeliculaoSerieDTO> peliculasoseries = peliculaoSerieMapper.toDTO(peliculaSerieList, context);
         return peliculasoseries;
+    }
+
+    //Listar por parametros --Deberá mostrar solamente los campos imagen, título y fecha de creación
+    //error
+    @Override
+    public PeliculaoSerieResumenDTO getByIdresumen(Long id) {
+
+
+        Optional<PeliculaoSerieResumenDTO> peliculaoSerieResumenOptional = peliculaoSerieRepository.findById(id);
+
+        PeliculaoSerieResumenDTO peliculaoSerieResumen = peliculaoSerieResumenOptional
+                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
+
+
+        PeliculaoSerieResumenDTO peliculaoSerieResumenDTO = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
+
+        return peliculaoSerieResumenDTO;
+
     }
     //listar por Id
     @Override
@@ -91,7 +122,7 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
         return peliculaoSerieUpdated;
     }
-    //borrar todo
+    //borrar all
     @Override
     public void remove(Long id) {
         Optional<PeliculaoSerie> peliculaoSerieByIdToDelete = peliculaoSerieRepository.findById(id);

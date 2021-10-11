@@ -1,6 +1,7 @@
 package ar.com.alk.disney.controller;
 
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
+import ar.com.alk.disney.model.dto.PeliculaoSerieResumenDTO;
 import ar.com.alk.disney.service.PeliculaoSerieServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,14 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Date;
 import java.util.List;
 
 
 @RestController//@RestController es un controller especial en RESTful de especificacion y equivale
 // a la suma de @Controller y @ResponseBody.
-@RequestMapping(value="peliculasoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
- // con una petición http
- //El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
+@RequestMapping(value = "peliculasoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
+// con una petición http
+//El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
 // la interacción entre un navegador y un servidor para manejar de forma segura las solicitudes HTTP de
 // origen cruzado
 
@@ -25,8 +27,8 @@ public class PeliculaoSerieController {
     private PeliculaoSerieServices peliculaoSerieServices;
 
 
-
-    @GetMapping({ "/", "" })
+    //getAll
+    @GetMapping({"/", ""})
     public ResponseEntity getPeliculasoSeriesMethod() {
         // se llama al servicio y se le pide el listado de peliculas y series
         List<PeliculaoSerieDTO> peliculasoSeries = peliculaoSerieServices.getAll();
@@ -37,7 +39,8 @@ public class PeliculaoSerieController {
                 .body(peliculasoSeries);
     }
 
-    @GetMapping({ "/{id}", "/{id}/" })
+    //get by id
+    @GetMapping({"/{id}", "/{id}/"})
     public ResponseEntity getPeliculaoSerieByIdMethod(@PathVariable Long id) {
 
         PeliculaoSerieDTO byId = peliculaoSerieServices.getById(id);
@@ -47,11 +50,23 @@ public class PeliculaoSerieController {
                 .body(byId);
     }
 
-    @PostMapping({ "/", "" })
+    //deberá mostrar solamente los campos imagen, título y fecha de creación.
+    @GetMapping
+    public ResponseEntity<List<PeliculaoSerieResumenDTO>> getByIdresumen(//ver este get
+            @RequestParam(required = false) String imagen,
+            @RequestParam(required = false) String titulo,
+            @RequestParam(required = false) Date fechaDeCreacion;
+
+    ) {
+        List<PeliculaoSerieResumenDTO> peliculaoseries = this.peliculaoSerieServices.getByIdresumen( imagen, titulo, fechaDeCreacion);
+        return ResponseEntity.ok(peliculaoseries); //error
+    }
+
+    @PostMapping({"/", ""})
     public ResponseEntity postPeliculaoSerieMethod(@Valid @RequestBody PeliculaoSerieDTO dto) throws URISyntaxException {
         //Valid que tome en cuenta las q estan definidias en esta entidad
         // se llama al servicio y se le pide que guarde pelicula o serie
-        PeliculaoSerieDTO newPelicualoSerie= peliculaoSerieServices.createNew(dto);
+        PeliculaoSerieDTO newPelicualoSerie = peliculaoSerieServices.createNew(dto);
 
         URI uri = new URI("/PeliculaoSeries/" + newPelicualoSerie.getId());
 
@@ -59,8 +74,9 @@ public class PeliculaoSerieController {
                 .created(uri)
                 .body(newPelicualoSerie);
     }
-    @DeleteMapping({ "/{id}", "/{id}/" })
-    public ResponseEntity deletePeliculaoSerieByIdMethod(@PathVariable Long id){
+
+    @DeleteMapping({"/{id}", "/{id}/"})
+    public ResponseEntity deletePeliculaoSerieByIdMethod(@PathVariable Long id) {
 
         peliculaoSerieServices.remove(id);
 
@@ -68,7 +84,6 @@ public class PeliculaoSerieController {
                 .noContent()
                 .build();
     }
-
 
 
 }

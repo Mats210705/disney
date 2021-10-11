@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -27,6 +28,7 @@ public class PersonajeDTO implements Serializable {
     private Float peso;
     @NotBlank(message = "Historia es requerida")
     private String historia;
+    private List<PeliculaoSerieDTO> pelicula;
 
     public Boolean hasNullOrEmptyAttributes() {
         return nombre == null || nombre.trim().isEmpty()

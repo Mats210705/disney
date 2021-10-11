@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -25,5 +26,6 @@ public class PersonajePorPeliculaSerieDTO implements Serializable {
     private float peso;
     @NotBlank(message = "Historia es requerida")
     private String historia;
-    private Set<PeliculaoSerie> peliculaoSeries;
+    //todos los objetos de personajes + collections de PeliculaoSerie
+    private List<PeliculaoSerie> peliculaoSeries;
 }

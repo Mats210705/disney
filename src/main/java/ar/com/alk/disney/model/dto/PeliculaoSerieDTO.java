@@ -1,6 +1,8 @@
 package ar.com.alk.disney.model.dto;
 
 ;
+import ar.com.alk.disney.model.entity.Genero;
+import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import ar.com.alk.disney.model.entity.Personaje;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -13,6 +15,7 @@ import javax.validation.constraints.Pattern;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -38,8 +41,8 @@ private Long id;
     @NotBlank(message = "La calificacion es requerido")
     @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
     private Integer calificacion;
-   private Long personajeid;
-   private Long generoid;
+    List<Genero>generos;
+    List<PeliculaoSerie>peliculaoSeries;
 
 
 
