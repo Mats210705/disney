@@ -75,21 +75,21 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
     //Listar por parametros --Deberá mostrar solamente los campos imagen, título y fecha de creación
     //error
-    @Override
-    public PeliculaoSerieResumenDTO getByIdresumen(Long id) {
+   // @Override
+   // public PeliculaoSerieResumenDTO getByIdresumen(Long id) {
 
 
-        Optional<PeliculaoSerieResumenDTO> peliculaoSerieResumenOptional = peliculaoSerieRepository.findById(id);
+     //   Optional<PeliculaoSerieResumenDTO> peliculaoSerieResumenOptional = peliculaoSerieRepository.findById(id);
 
-        PeliculaoSerieResumenDTO peliculaoSerieResumen = peliculaoSerieResumenOptional
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
+       // PeliculaoSerieResumenDTO peliculaoSerieResumen = peliculaoSerieResumenOptional
+          //      .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
 
 
-        PeliculaoSerieResumenDTO peliculaoSerieResumenDTO = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
+        //PeliculaoSerieResumenDTO peliculaoSerieResumenDTO = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
 
-        return peliculaoSerieResumenDTO;
+        //return peliculaoSerieResumenDTO;
 
-    }
+   // }
     //listar por Id
     @Override
     public PeliculaoSerieDTO getById(Long id) {

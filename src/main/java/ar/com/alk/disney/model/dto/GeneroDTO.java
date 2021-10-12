@@ -18,8 +18,8 @@ public class GeneroDTO implements Serializable {
     private String imagen;
 
 
-    @JsonIgnoreProperties({ "generos" })
-    private PeliculaoSerieDTO peliculaoSerie;
+    @JsonIgnoreProperties({ "generos" , "personajes"})
+    private PeliculaoSerieDTO peliculaoSeries;
 
     public Boolean hasNullOrEmptyAttributes() {
         return nombre == null || nombre.trim().isEmpty()

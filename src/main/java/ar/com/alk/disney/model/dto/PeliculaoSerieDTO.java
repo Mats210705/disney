@@ -22,9 +22,9 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class PeliculaoSerieDTO implements Serializable{
+public class PeliculaoSerieDTO implements Serializable {
 
-private Long id;
+    private Long id;
     @NotBlank(message = "Imagen es requerida")
     @Pattern(regexp = "http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?", message = "URL contiene caracteres invalidos")
     private String imagen;
@@ -41,19 +41,18 @@ private Long id;
     @NotBlank(message = "La calificacion es requerido")
     @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
     private Integer calificacion;
-    List<Genero>generos;
-    List<PeliculaoSerie>peliculaoSeries;
 
+    @JsonIgnoreProperties({"peliculaoSeries"})
+    private GeneroDTO genero;
 
 
     public Boolean hasNullOrEmptyAttributes() {
         return imagen == null || imagen.trim().isEmpty()
                 || tituto == null || tituto.trim().isEmpty()
                 || fechaDeCreacion == null
-                || calificacion == null ;
+                || calificacion == null;
 
     }
-
 
 
 }

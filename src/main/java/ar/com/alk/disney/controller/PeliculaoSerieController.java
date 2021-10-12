@@ -51,16 +51,16 @@ public class PeliculaoSerieController {
     }
 
     //deberá mostrar solamente los campos imagen, título y fecha de creación.
-    @GetMapping
-    public ResponseEntity<List<PeliculaoSerieResumenDTO>> getByIdresumen(//ver este get
-            @RequestParam(required = false) String imagen,
-            @RequestParam(required = false) String titulo,
-            @RequestParam(required = false) Date fechaDeCreacion;
+   // @GetMapping
+   // public ResponseEntity<List<PeliculaoSerieResumenDTO>> getByIdresumen(//ver este get
+     //       @RequestParam(required = false) String imagen,
+      //      @RequestParam(required = false) String titulo,
+        //    @RequestParam(required = false) Date fechaDeCreacion;
 
-    ) {
-        List<PeliculaoSerieResumenDTO> peliculaoseries = this.peliculaoSerieServices.getByIdresumen( imagen, titulo, fechaDeCreacion);
-        return ResponseEntity.ok(peliculaoseries); //error
-    }
+    //) {
+      //  List<PeliculaoSerieResumenDTO> peliculaoseries = this.peliculaoSerieServices.getByIdresumen( imagen, titulo, fechaDeCreacion);
+     //   return ResponseEntity.ok(peliculaoseries); //error
+   // }
 
     @PostMapping({"/", ""})
     public ResponseEntity postPeliculaoSerieMethod(@Valid @RequestBody PeliculaoSerieDTO dto) throws URISyntaxException {

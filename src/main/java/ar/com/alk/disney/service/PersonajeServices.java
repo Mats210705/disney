@@ -85,7 +85,8 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
         Personaje personaje = personajeOptional
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityEmptyValues("Personaje"));
-
+        ///lo convierte en DTO la entidad personaje en ese contexto, para que tenga en cuenta el
+        //desbordamiento de la memoria
         PersonajeDTO personajeDTO = personajeMapper.toDTO(personaje, context);
 
         return personajeDTO;
