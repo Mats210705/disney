@@ -1,7 +1,9 @@
 package ar.com.alk.disney.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.*;
+import net.bytebuddy.implementation.bind.annotation.AllArguments;
 
 
 import java.io.Serializable;
@@ -10,11 +12,8 @@ import java.util.*;
 
 import javax.persistence.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
+@AllArguments
 @Getter
-
 @Entity
 @Table(name = "pelicula_serie")
 

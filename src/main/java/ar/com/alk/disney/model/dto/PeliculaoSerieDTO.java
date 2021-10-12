@@ -7,6 +7,7 @@ import ar.com.alk.disney.model.entity.Personaje;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
+import net.bytebuddy.implementation.bind.annotation.AllArguments;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -17,7 +18,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@AllArgsConstructor
+@AllArguments
 @NoArgsConstructor
 @Getter
 @Setter

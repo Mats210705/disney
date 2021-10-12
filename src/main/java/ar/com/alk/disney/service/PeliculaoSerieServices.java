@@ -1,11 +1,11 @@
 package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
-import ar.com.alk.disney.model.dto.GeneroDTO;
+
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
 
 import ar.com.alk.disney.model.dto.PeliculaoSerieResumenDTO;
-import ar.com.alk.disney.model.entity.Genero;
+
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
 
 import ar.com.alk.disney.model.entity.Personaje;
@@ -15,7 +15,7 @@ import ar.com.alk.disney.model.repository.PeliculaoSerieRepository;
 import ar.com.alk.disney.model.repository.PersonajeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 import java.util.*;
 
@@ -74,22 +74,12 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
     }
 
     //Listar por parametros --Deberá mostrar solamente los campos imagen, título y fecha de creación
-    //error
-   // @Override
-   // public PeliculaoSerieResumenDTO getByIdresumen(Long id) {
+
+    @Override
+    public PeliculaoSerieResumenDTO getseleccion(Long id) {
 
 
-     //   Optional<PeliculaoSerieResumenDTO> peliculaoSerieResumenOptional = peliculaoSerieRepository.findById(id);
-
-       // PeliculaoSerieResumenDTO peliculaoSerieResumen = peliculaoSerieResumenOptional
-          //      .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
-
-
-        //PeliculaoSerieResumenDTO peliculaoSerieResumenDTO = peliculaoSerieMapper.toDTO(peliculaoSerie, context);
-
-        //return peliculaoSerieResumenDTO;
-
-   // }
+    }
     //listar por Id
     @Override
     public PeliculaoSerieDTO getById(Long id) {

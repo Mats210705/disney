@@ -4,14 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import net.bytebuddy.implementation.bind.annotation.AllArguments;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@AllArguments
 
 public class PersonajeResumenDTO implements Serializable {
     //El listado deberá mostrar: Imagen y nombre

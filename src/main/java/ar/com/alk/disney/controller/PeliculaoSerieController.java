@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Date;
+import java.util.ArrayList;
+
 import java.util.List;
+
+
 
 
 @RestController//@RestController es un controller especial en RESTful de especificacion y equivale
@@ -51,18 +54,13 @@ public class PeliculaoSerieController {
     }
 
     //deberá mostrar solamente los campos imagen, título y fecha de creación.
-   // @GetMapping
-   // public ResponseEntity<List<PeliculaoSerieResumenDTO>> getByIdresumen(//ver este get
-     //       @RequestParam(required = false) String imagen,
-      //      @RequestParam(required = false) String titulo,
-        //    @RequestParam(required = false) Date fechaDeCreacion;
+    private List<PeliculaoSerieResumenDTO> seleccion = new ArrayList<>();
 
-    //) {
-      //  List<PeliculaoSerieResumenDTO> peliculaoseries = this.peliculaoSerieServices.getByIdresumen( imagen, titulo, fechaDeCreacion);
-     //   return ResponseEntity.ok(peliculaoseries); //error
-   // }
-
-    @PostMapping({"/", ""})
+    @GetMapping({ "", "/" })
+    public ResponseEntity getAllseleccion() {
+        return ResponseEntity.ok().body(seleccion);
+    }
+        @PostMapping({"/", ""})
     public ResponseEntity postPeliculaoSerieMethod(@Valid @RequestBody PeliculaoSerieDTO dto) throws URISyntaxException {
         //Valid que tome en cuenta las q estan definidias en esta entidad
         // se llama al servicio y se le pide que guarde pelicula o serie
