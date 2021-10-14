@@ -23,7 +23,7 @@ public class PeliculaoSerieResumenDTO {
     private Long id;
     @NotBlank(message = "Imagen es requerida")
     @Pattern(regexp = "http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?", message = "URL contiene caracteres invalidos")
-    private String imagen;
+    private String imagenUrl;
 
     @NotBlank(message = "Titulo es requerido")
     @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚÜüñÑ\\s]*$", message = "Titulo contiene caracteres invalidos")
@@ -35,7 +35,7 @@ public class PeliculaoSerieResumenDTO {
     private Date fechaDeCreacion;
 
     public Boolean hasNullOrEmptyAttributes() {
-        return imagen == null || imagen.trim().isEmpty()
+        return imagenUrl == null || imagenUrl.trim().isEmpty()
                 || tituto == null || tituto.trim().isEmpty()
                 || fechaDeCreacion == null;
     }

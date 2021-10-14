@@ -3,16 +3,10 @@ package ar.com.alk.disney.model.entity;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
-
 import java.util.List;
-import java.util.Set;
-import javax.persistence.*;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -28,7 +22,7 @@ public class Genero implements Serializable {
     @Column(nullable = false, length = 30)
     private String nombre;
     @Column(nullable = false, length = 50)
-    private String imagen;
+    private String imagenUrl;
 
 
     @ManyToMany(mappedBy = "generos")

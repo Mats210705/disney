@@ -76,13 +76,16 @@ public class GeneroServices implements Services<GeneroDTO, Genero> {
     }
 
     @Override
-    public void remove(Long id) {
+    public GeneroDTO remove(Long id) {
         Optional<Genero> generoByIdToDelete = generoRepository.findById(id);
 
         Genero genero = generoByIdToDelete
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Genero", id));
 
         generoRepository.deleteById(id);
+        GeneroDTO generoDeleted = generoMapper.toDTO(genero, context);
+
+        return generoDeleted;
 
     }
 
@@ -93,20 +96,20 @@ public class GeneroServices implements Services<GeneroDTO, Genero> {
 
         if (!entity.getNombre().equals(dto.getNombre()))
             entity.setNombre(dto.getNombre());
-        if (!entity.getImagen().equals(dto.getNombre()))
-            entity.setImagen(dto.getImagen());
+        if (!entity.getImagenUrl().equals(dto.getNombre()))
+            entity.setImagenUrl(dto.getImagenUrl());
 
     }
-    public GeneroDTO removeById(Long id) {
-        Optional<Genero> generoByIdToDelete = generoRepository.findById(id);
+    //public GeneroDTO removeById(Long id) {
+       // Optional<Genero> generoByIdToDelete = generoRepository.findById(id);
 
-        Genero genero = generoByIdToDelete
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Genero", id));
+       // Genero genero = generoByIdToDelete
+        //        .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Genero", id));
 
-        generoRepository.delete(genero);
+       // generoRepository.delete(genero);
 
-        GeneroDTO generoDeleted = generoMapper.toDTO(genero, context);
+       // GeneroDTO generoDeleted = generoMapper.toDTO(genero, context);
 
-        return generoDeleted;
-    }
+       // return generoDeleted;
+   // }
 }

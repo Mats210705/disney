@@ -1,18 +1,18 @@
 package ar.com.alk.disney.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import lombok.*;
-import net.bytebuddy.implementation.bind.annotation.AllArguments;
-
-
-import java.io.Serializable;
-
-import java.util.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-
-@AllArguments
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 @Getter
 @Entity
 @Table(name = "pelicula_serie")
@@ -26,7 +26,7 @@ public class PeliculaoSerie implements Serializable {
     private Long Id;
 
     @Column(nullable = false)
-    private String imagen;
+    private String imagenUrl;
 
     @Column(nullable = false)
     private String titulo;
@@ -36,6 +36,7 @@ public class PeliculaoSerie implements Serializable {
 
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
+    private boolean deleted = Boolean.FALSE;
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
@@ -56,6 +57,7 @@ public class PeliculaoSerie implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "genero_id")
     )
     private List<Genero> generos = new ArrayList<>();
+
 
 
 }

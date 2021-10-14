@@ -1,10 +1,8 @@
 package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
-import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
+import ar.com.alk.disney.model.dto.GeneroDTO;
 import ar.com.alk.disney.model.dto.PersonajeDTO;
-
-import ar.com.alk.disney.model.entity.PeliculaoSerie;
 import ar.com.alk.disney.model.entity.Personaje;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
 import ar.com.alk.disney.model.mapper.PersonajeMapper;
@@ -46,7 +44,6 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
         return personajeSaved;
     }
 
-
     //MOSTRAR
     public List<PersonajeDTO> getAll() {
         List<Personaje> personajeList = personajeRepository.findAll();
@@ -55,6 +52,16 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
         return personajeDTOS;
     }
+
+
+    //MOSTRAR
+    //public List<PersonajeResumenDTO> getAll() {
+     //   List<PersonajeResumenDTO> personajeResum = personajeRepository();
+
+       // List<PersonajeDTO> personajeDTOS = personajeMapper.toDTO(personajeList, context);
+
+       // return PersonajeResumenDTO;
+    //}
     //MOSTRAR POR ID
     @Override
     public PersonajeDTO getById(Long id) {
@@ -68,37 +75,17 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
         return personajeDTO;
     }
 
-    //MOSTRAR POR IMAGEN
-    public PersonajeDTO getByImage(String imagen) {
-        Optional<Personaje> personajeOptional = personajeRepository.findByImage (imagen);
 
-        Personaje personaje = personajeOptional
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityEmptyValues("Personaje"));
 
-        PersonajeDTO personajeDTO = personajeMapper.toDTO(personaje, context);
-
-        return personajeDTO;
-    }
-   //MOSTRAR POR NOMBRE
-    public PersonajeDTO getByName(String nombre) {
-        Optional<Personaje> personajeOptional= personajeRepository.findByName(nombre);
-
-        Personaje personaje = personajeOptional
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityEmptyValues("Personaje"));
-        ///lo convierte en DTO la entidad personaje en ese contexto, para que tenga en cuenta el
-        //desbordamiento de la memoria
-        PersonajeDTO personajeDTO = personajeMapper.toDTO(personaje, context);
-
-        return personajeDTO;
-    }
    //ELIMINAR
     @Override
-    public void remove(Long id) {
+    public GeneroDTO remove(Long id) {
         Optional<Personaje>personajeByIdToDelete= personajeRepository.findById(id);
         Personaje personaje=personajeByIdToDelete
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje",id));
         personajeRepository.deleteById(id);
 
+        return null;
     }
    //MERGE
     @Override
@@ -112,8 +99,8 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
             entity.setEdad(dto.getEdad());
         if (!Objects.equals(entity.getPeso(), dto.getPeso()))
             entity.setPeso(dto.getPeso());
-        if (!entity.getImagen().equals(dto.getImagen()))
-            entity.setImagen(dto.getImagen());
+        if (!entity.getImagenUrl().equals(dto.getImagenUrl()))
+            entity.setImagenUrl(dto.getImagenUrl());
         if (!entity.getHistoria().equals(dto.getHistoria()))
             entity.setHistoria(dto.getHistoria());
 

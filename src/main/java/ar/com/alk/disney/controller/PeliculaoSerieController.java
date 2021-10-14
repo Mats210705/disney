@@ -53,13 +53,7 @@ public class PeliculaoSerieController {
                 .body(byId);
     }
 
-    //deberá mostrar solamente los campos imagen, título y fecha de creación.
-    private List<PeliculaoSerieResumenDTO> seleccion = new ArrayList<>();
 
-    @GetMapping({ "", "/" })
-    public ResponseEntity getAllseleccion() {
-        return ResponseEntity.ok().body(seleccion);
-    }
         @PostMapping({"/", ""})
     public ResponseEntity postPeliculaoSerieMethod(@Valid @RequestBody PeliculaoSerieDTO dto) throws URISyntaxException {
         //Valid que tome en cuenta las q estan definidias en esta entidad

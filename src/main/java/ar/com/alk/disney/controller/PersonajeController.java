@@ -1,8 +1,6 @@
 package ar.com.alk.disney.controller;
 
-import ar.com.alk.disney.model.dto.GeneroDTO;
 import ar.com.alk.disney.model.dto.PersonajeDTO;
-
 import ar.com.alk.disney.service.PersonajeServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -39,25 +37,9 @@ public class PersonajeController {
 
     }
 
-    @GetMapping({"/{imagen}/"})
-    public ResponseEntity getPersonajeByImagenMethod(@PathVariable String imagen) {
-
-        PersonajeDTO byImagen = personajeServices.getByImage(imagen);
-        return ResponseEntity
-                .ok()
-                .body(byImagen);
 
 
-    }
 
-    @GetMapping({"/{nombre}/"})
-    public ResponseEntity getPersonajeByNombreMethod(@PathVariable String nombre) {
-        PersonajeDTO byNombre = personajeServices.getByName(nombre);
-        return ResponseEntity
-                .ok()
-                .body(byNombre);
-
-    }
     @PostMapping({ "/", "" })
     public ResponseEntity postPersonajeMethod(@Valid @RequestBody PersonajeDTO dto) throws URISyntaxException {
         //Valid que tome en cuenta las q estan definidias en esta entidad

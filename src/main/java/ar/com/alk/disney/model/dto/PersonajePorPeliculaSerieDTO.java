@@ -1,6 +1,7 @@
 package ar.com.alk.disney.model.dto;
 
 import ar.com.alk.disney.model.entity.PeliculaoSerie;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,6 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +19,7 @@ public class PersonajePorPeliculaSerieDTO implements Serializable {
     @NotBlank(message = "Nombre es requerido")
     private String nombre;
     @NotBlank(message = "Imagen es requerida")
-    private String imagen;
+    private String imagenUrl;
     @NotBlank(message = "Edad es requerida")
     private Integer edad;
     @NotBlank(message = "Peso es requerido")
@@ -27,5 +27,7 @@ public class PersonajePorPeliculaSerieDTO implements Serializable {
     @NotBlank(message = "Historia es requerida")
     private String historia;
     //todos los objetos de personajes + collections de PeliculaoSerie
-    private List<PeliculaoSerie> peliculaoSeries;
+
+    @JsonIgnoreProperties({ "generos" , "personajes"})
+    private PeliculaoSerieDTO peliculaoSeries;
 }

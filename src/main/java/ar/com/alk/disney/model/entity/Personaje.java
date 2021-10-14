@@ -3,14 +3,10 @@ package ar.com.alk.disney.model.entity;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
-
 import java.util.List;
-import java.util.Set;
-
-import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -34,7 +30,7 @@ public class Personaje implements Serializable {
     private float peso;
 
     @Column(nullable = false)
-    private String imagen;
+    private String imagenUrl;
 
     @Column(nullable = false)
     private String historia;

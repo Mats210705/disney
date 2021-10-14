@@ -18,6 +18,7 @@ import java.util.List;
 public class GeneroController {
     @Autowired
     private GeneroServices generoServices;
+
     //getAll
     @GetMapping({"/", ""})
     public ResponseEntity getGenerosMethod() {
@@ -27,6 +28,7 @@ public class GeneroController {
                 .body(generos);
 
     }
+
     //getById
     @GetMapping({"/{id}", "/{id}/"})
     public ResponseEntity getGeneroByIdMethod(@PathVariable Long id) {
@@ -37,6 +39,7 @@ public class GeneroController {
                 .ok()
                 .body(byId);
     }
+
     //Delete
     @DeleteMapping({"/{id}", "/{id}/"})
     public ResponseEntity deleteGeneroByIdMethod(@PathVariable Long id) {
@@ -47,6 +50,7 @@ public class GeneroController {
                 .noContent()
                 .build();
     }
+
     //guardar nuevos ingresos
     @PostMapping({"/", ""})
     public ResponseEntity postGeneroMethod(@Valid @RequestBody GeneroDTO dto) throws URISyntaxException {

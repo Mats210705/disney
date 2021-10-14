@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class GeneroDTO implements Serializable {
     private Long id;
     private String nombre;
-    private String imagen;
+    private String imagenUrl;
 
 
     @JsonIgnoreProperties({ "generos" , "personajes"})
@@ -23,7 +23,7 @@ public class GeneroDTO implements Serializable {
 
     public Boolean hasNullOrEmptyAttributes() {
         return nombre == null || nombre.trim().isEmpty()
-                || imagen == null || imagen.trim().isEmpty();
+                || imagenUrl == null || imagenUrl.trim().isEmpty();
     }
 
 }
