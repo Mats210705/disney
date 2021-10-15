@@ -1,7 +1,6 @@
 package ar.com.alk.disney.service;
 
 import ar.com.alk.disney.component.BusinessLogicExceptionComponent;
-import ar.com.alk.disney.model.dto.GeneroDTO;
 import ar.com.alk.disney.model.dto.PersonajeDTO;
 import ar.com.alk.disney.model.entity.Personaje;
 import ar.com.alk.disney.model.mapper.AvoidingMappingContext;
@@ -79,13 +78,15 @@ public class PersonajeServices implements Services<PersonajeDTO, Personaje> {
 
    //ELIMINAR
     @Override
-    public GeneroDTO remove(Long id) {
-        Optional<Personaje>personajeByIdToDelete= personajeRepository.findById(id);
-        Personaje personaje=personajeByIdToDelete
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje",id));
-        personajeRepository.deleteById(id);
+    public void remove(Long id) {
 
-        return null;
+        Personaje personaje = personajeRepository
+                .findById(id)
+                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Persona", id));
+
+        personajeRepository.delete(personaje);
+
+
     }
    //MERGE
     @Override

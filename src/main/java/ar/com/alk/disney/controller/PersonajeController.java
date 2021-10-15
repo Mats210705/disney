@@ -21,10 +21,10 @@ public class PersonajeController {
     @GetMapping({"/", ""})//GET para la configuración de páginas web (filtros, ordenación, búsquedas, etc.)
     public ResponseEntity getPersonajesMethod() {
         // se llama al servicio y se le pide el listado de personajes
-        List<PersonajeDTO> personajes = personajeServices.getAll();
+        List<PersonajeDTO> personaje = personajeServices.getAll();
         return ResponseEntity
                 .ok()
-                .body(personajes);
+                .body(personaje);
 
     }
    //mostrar por id
@@ -53,6 +53,7 @@ public class PersonajeController {
                 .body(newPersonaje);
     }
     @DeleteMapping({ "/{id}", "/{id}/" })
+
     public ResponseEntity deletePersonajeByIdMethod(@PathVariable Long id){
 
         personajeServices.remove(id);

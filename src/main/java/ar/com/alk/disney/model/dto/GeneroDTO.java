@@ -18,7 +18,7 @@ public class GeneroDTO implements Serializable {
     private String imagenUrl;
 
 
-    @JsonIgnoreProperties({ "generos" , "personajes"})
+    @JsonIgnoreProperties({ "generos" })
     private PeliculaoSerieDTO peliculaoSeries;
 
     public Boolean hasNullOrEmptyAttributes() {

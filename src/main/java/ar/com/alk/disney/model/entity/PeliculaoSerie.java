@@ -36,6 +36,7 @@ public class PeliculaoSerie implements Serializable {
 
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
+
     private boolean deleted = Boolean.FALSE;
 
     @ManyToMany(cascade = {
@@ -47,6 +48,7 @@ public class PeliculaoSerie implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "personaje_id")
     )
     private List<Personaje> personajes = new ArrayList<>();
+
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,

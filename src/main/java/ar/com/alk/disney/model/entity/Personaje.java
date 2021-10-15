@@ -34,6 +34,7 @@ public class Personaje implements Serializable {
 
     @Column(nullable = false)
     private String historia;
+
     private boolean deleted = Boolean.FALSE;
 
 

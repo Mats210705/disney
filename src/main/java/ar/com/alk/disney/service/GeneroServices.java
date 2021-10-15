@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class GeneroServices implements Services<GeneroDTO, Genero> {
+public class  GeneroServices implements Services<GeneroDTO, Genero> {
     @Autowired
     private GeneroMapper generoMapper= GeneroMapper.MAPPER;
     @Autowired
@@ -76,17 +76,11 @@ public class GeneroServices implements Services<GeneroDTO, Genero> {
     }
 
     @Override
-    public GeneroDTO remove(Long id) {
+    public void remove(Long id) {
         Optional<Genero> generoByIdToDelete = generoRepository.findById(id);
-
         Genero genero = generoByIdToDelete
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Genero", id));
-
-        generoRepository.deleteById(id);
-        GeneroDTO generoDeleted = generoMapper.toDTO(genero, context);
-
-        return generoDeleted;
-
+        generoRepository.delete(genero);
     }
 
     @Override

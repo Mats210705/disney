@@ -29,6 +29,7 @@ public class PersonajeDTO implements Serializable {
     @NotBlank(message = "Historia es requerida")
     private String historia;
     private List<PeliculaoSerieDTO> pelicula;
+
     @JsonIgnoreProperties({ "generos" , "personajes"})
     private PeliculaoSerieDTO peliculaoSeries;
 

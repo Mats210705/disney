@@ -1,7 +1,6 @@
 package ar.com.alk.disney.controller;
 
 import ar.com.alk.disney.model.dto.PeliculaoSerieDTO;
-import ar.com.alk.disney.model.dto.PeliculaoSerieResumenDTO;
 import ar.com.alk.disney.service.PeliculaoSerieServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-
 import java.util.List;
 
 

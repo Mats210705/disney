@@ -39,6 +39,7 @@ public class PeliculaoSerieDTO implements Serializable {
 
     @JsonIgnoreProperties({"peliculaoSeries"})
     private GeneroDTO genero;
+
     @JsonIgnoreProperties({"peliculaoSeries"})
     private GeneroDTO personaje;
 
