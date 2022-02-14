@@ -4,6 +4,7 @@ package ar.com.alk.disney.model.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 
 
@@ -14,7 +15,10 @@ import java.io.Serializable;
 @ToString
 public class GeneroDTO implements Serializable {
     private Long id;
+
+    @Column(nullable = false)
     private String nombre;
+    @Column(name = "imagen_url", nullable = false)
     private String imagenUrl;
 
 

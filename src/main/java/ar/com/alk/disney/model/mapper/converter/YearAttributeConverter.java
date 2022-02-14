@@ -6,7 +6,7 @@ import javax.persistence.Converter;
 import java.time.Year;
 
 @Converter(autoApply = true)
-public class YearAttributeConverter implements AttributeConverter<Year, Short> {
+public class  YearAttributeConverter implements AttributeConverter<Year, Short> {
     @Override
     public Short convertToDatabaseColumn(Year year) {
         // Short.valueOf(year.toString());

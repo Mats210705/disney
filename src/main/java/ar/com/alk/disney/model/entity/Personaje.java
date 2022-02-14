@@ -16,8 +16,8 @@ import java.util.List;
 @Table(name="personaje")
 public class Personaje implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
     @Column(nullable = false)
@@ -29,13 +29,11 @@ public class Personaje implements Serializable {
     @Column(nullable = false)
     private float peso;
 
-    @Column(nullable = false)
+    @Column(name = "imagen_url", nullable = false)
     private String imagenUrl;
 
     @Column(nullable = false)
     private String historia;
-
-    private boolean deleted = Boolean.FALSE;
 
 
 
@@ -43,13 +41,13 @@ public class Personaje implements Serializable {
     @ManyToMany(mappedBy = "personajes")
     public List<PeliculaoSerie> peliculasoseries = new ArrayList<>();
 
-    public void addPeliculaoSerie(PeliculaoSerie pais) {
-        this.peliculasoseries.add(pais);
-    }
+   // public void addPeliculaoSerie(PeliculaoSerie pais) {
+     //   this.peliculasoseries.add(pais);
+    //}
 
-    public void removePeliculaoSerie(PeliculaoSerie peliculaoSerie) {
-        this.peliculasoseries.remove(peliculaoSerie);
-    }
+   // public void removePeliculaoSerie(PeliculaoSerie peliculaoSerie) {
+      //  this.peliculasoseries.remove(peliculaoSerie);
+   // }
 
 
 }

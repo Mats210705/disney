@@ -16,11 +16,7 @@ import java.util.List;
 
 @RestController//@RestController es un controller especial en RESTful de especificacion y equivale
 // a la suma de @Controller y @ResponseBody.
-@RequestMapping(value = "peliculasoSeries")//@RequestMapping: Anotación que se encarga de relacionar un método
-// con una petición http
-//El intercambio de recursos de origen cruzado (CORS) es un protocolo estándar que define
-// la interacción entre un navegador y un servidor para manejar de forma segura las solicitudes HTTP de
-// origen cruzado
+
 
 public class PeliculaoSerieController {
     @Autowired
@@ -51,13 +47,13 @@ public class PeliculaoSerieController {
     }
 
 
-        @PostMapping({"/", ""})
-    public ResponseEntity postPeliculaoSerieMethod(@Valid @RequestBody PeliculaoSerieDTO dto) throws URISyntaxException {
+        @PostMapping({"/personajes/{personajesId}/PeliculaoSeries ","/personajes/{personajesId}/PeliculaoSeries " })
+    public ResponseEntity postPersonajeMethod(@Valid @RequestBody PeliculaoSerieDTO dto, @PathVariable Long personajesId ) throws URISyntaxException {
         //Valid que tome en cuenta las q estan definidias en esta entidad
         // se llama al servicio y se le pide que guarde pelicula o serie
-        PeliculaoSerieDTO newPelicualoSerie = peliculaoSerieServices.createNew(dto);
+        PeliculaoSerieDTO newPelicualoSerie = peliculaoSerieServices.createNew(dto, personajesId);
 
-        URI uri = new URI("/PeliculaoSeries/" + newPelicualoSerie.getId());
+        URI uri = new URI("/personaje/" + newPelicualoSerie.getId());
 
         return ResponseEntity
                 .created(uri)

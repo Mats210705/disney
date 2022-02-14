@@ -52,9 +52,9 @@ public class PersonajeController {
                 .created(uri)
                 .body(newPersonaje);
     }
-    @DeleteMapping({ "/{id}", "/{id}/" })
+    @DeleteMapping({ "/{id}" })
 
-    public ResponseEntity deletePersonajeByIdMethod(@PathVariable Long id){
+    public ResponseEntity<Void> delete(@PathVariable Long id){
 
         personajeServices.remove(id);
 

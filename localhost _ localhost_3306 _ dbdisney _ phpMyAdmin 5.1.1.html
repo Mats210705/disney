@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://localhost/phpmyadmin/index.php?route=/database/structure&server=1&db=dbdisney -->
+<html lang="es" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  
+  <link rel="icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+      <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/show-hint.css">
+    <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/lint.css">
+    <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/theme.css">
+    <link rel="stylesheet" type="text/css" href="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/printview.css" media="print" id="printcss">
+    <title>localhost / localhost:3306 / dbdisney | phpMyAdmin 5.1.1</title>
+    <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery-migrate.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/sprintf.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/ajax.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/keyhandler.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/bootstrap.bundle.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery-ui.min.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/js.cookie.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery.mousewheel.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery.validate.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery-ui-timepicker-addon.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery.ba-hashchange-2.0.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/jquery.debounce-1.0.6.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/menu_resizer.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/cross_framing_protection.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/rte.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/tracekit.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/error_report.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/messages.php"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/config.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/doclinks.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/functions.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/navigation.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/indexes.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/common.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/page_settings.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/drag_drop_import.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/shortcuts_handler.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/structure.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/codemirror.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/sql.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/runmode.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/show-hint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/sql-hint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/lint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/sql-lint.js.download"></script>
+  <script data-cfasync="false" type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/console.js.download"></script>
+
+<script data-cfasync="false" type="text/javascript">
+// <![CDATA[
+var firstDayOfCalendar = '0';
+var themeImagePath = '.\/themes\/pmahomme\/img\/';
+var mysqlDocTemplate = '.\/url.php\u003Furl\u003Dhttps\u00253A\u00252F\u00252Fdev.mysql.com\u00252Fdoc\u00252Frefman\u00252F8.0\u00252Fen\u00252F\u002525s.html';
+var maxInputVars = 1000;
+
+if ($.datepicker) {
+  $.datepicker.regional[''].closeText = 'Terminado';
+  $.datepicker.regional[''].prevText = 'Prev';
+  $.datepicker.regional[''].nextText = 'Next';
+  $.datepicker.regional[''].currentText = 'Hoy';
+  $.datepicker.regional[''].monthNames = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre',
+  ];
+  $.datepicker.regional[''].monthNamesShort = [
+    'Ene',
+    'Feb',
+    'Mar',
+    'Abr',
+    'Mayo',
+    'Jun',
+    'Jul',
+    'Ago',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dic',
+  ];
+  $.datepicker.regional[''].dayNames = [
+    'Domingo',
+    'Lunes',
+    'Martes',
+    'Mi\u00E9rcoles',
+    'Jueves',
+    'Viernes',
+    'S\u00E1bado',
+  ];
+  $.datepicker.regional[''].dayNamesShort = [
+    'Dom',
+    'Lun',
+    'Mar',
+    'Mie',
+    'Jue',
+    'Vie',
+    'Sab',
+  ];
+  $.datepicker.regional[''].dayNamesMin = [
+    'Do',
+    'Lu',
+    'Ma',
+    'Mi',
+    'Ju',
+    'Vi',
+    'Sa',
+  ];
+  $.datepicker.regional[''].weekHeader = 'Sem';
+  $.datepicker.regional[''].showMonthAfterYear = true;
+  $.datepicker.regional[''].yearSuffix = '';
+  $.extend($.datepicker._defaults, $.datepicker.regional['']);
+}
+
+if ($.timepicker) {
+  $.timepicker.regional[''].timeText = 'Tiempo';
+  $.timepicker.regional[''].hourText = 'Hora';
+  $.timepicker.regional[''].minuteText = 'Minuto';
+  $.timepicker.regional[''].secondText = 'Segundo';
+  $.extend($.timepicker._defaults, $.timepicker.regional['']);
+}
+
+function extendingValidatorMessages () {
+  $.extend($.validator.messages, {
+    required: 'Este\u0020campo\u0020es\u0020requerido',
+    remote: 'Corrige\u0020este\u0020campo',
+    email: 'Ingrese\u0020un\u0020correo\u0020electr\u00F3nico\u0020v\u00E1lido',
+    url: 'Ingrese\u0020una\u0020URL\u0020v\u00E1lida',
+    date: 'Ingrese\u0020una\u0020fecha\u0020v\u00E1lida',
+    dateISO: 'Ingrese\u0020una\u0020fecha\u0020\u0028\u0020ISO\u0020\u0029\u0020v\u00E1lida',
+    number: 'Ingrese\u0020un\u0020n\u00FAmero\u0020v\u00E1lido',
+    creditcard: 'Ingrese\u0020un\u0020n\u00FAmero\u0020de\u0020tarjeta\u0020de\u0020cr\u00E9dito\u0020valido',
+    digits: 'Ingrese\u0020solo\u0020d\u00EDgitos',
+    equalTo: 'Ingrese\u0020el\u0020mismo\u0020valor\u0020de\u0020nuevo',
+    maxlength: $.validator.format('Ingrese\u0020no\u0020m\u00E1s\u0020de\u0020\u007B0\u007D\u0020caracteres'),
+    minlength: $.validator.format('Ingrese\u0020al\u0020menos\u0020\u007B0\u007D\u0020caracteres'),
+    rangelength: $.validator.format('Ingrese\u0020un\u0020valor\u0020entre\u0020\u007B0\u007D\u0020y\u0020\u007B1\u007D\u0020caracteres\u0020de\u0020largo'),
+    range: $.validator.format('Ingrese\u0020un\u0020valor\u0020entre\u0020\u007B0\u007D\u0020y\u0020\u007B1\u007D'),
+    max: $.validator.format('Ingrese\u0020un\u0020valor\u0020menor\u0020o\u0020igual\u0020a\u0020\u007B0\u007D'),
+    min: $.validator.format('Ingrese\u0020un\u0020valor\u0020mayor\u0020o\u0020igual\u0020a\u0020\u007B0\u007D'),
+    validationFunctionForDateTime: $.validator.format('Ingrese\u0020una\u0020fecha\u0020u\u0020hora\u0020v\u00E1lida'),
+    validationFunctionForHex: $.validator.format('Ingrese\u0020una\u0020entrada\u0020HEX\u0020v\u00E1lida'),
+    validationFunctionForMd5: $.validator.format('This\u0020column\u0020can\u0020not\u0020contain\u0020a\u002032\u0020chars\u0020value'),
+    validationFunctionForAesDesEncrypt: $.validator.format('These\u0020functions\u0020are\u0020meant\u0020to\u0020return\u0020a\u0020binary\u0020result\u003B\u0020to\u0020avoid\u0020inconsistent\u0020results\u0020you\u0020should\u0020store\u0020it\u0020in\u0020a\u0020BINARY,\u0020VARBINARY,\u0020or\u0020BLOB\u0020column.')
+  });
+}
+
+CommonParams.setAll({common_query:"",opendb_url:"index.php?route=/database/structure",lang:"es",server:"1",table:"personaje",db:"dbdisney",token:"3a74772e245a73673f5d244e4c292558",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Examinar",pma_text_left_default_tab:"Estructura",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"5.1.1",auth_type:"config",user:"octu"});
+ConsoleEnterExecutes=false
+
+AJAX.scriptHandler
+  .add('vendor/jquery/jquery.min.js', 0)
+  .add('vendor/jquery/jquery-migrate.js', 0)
+  .add('vendor/sprintf.js', 1)
+  .add('ajax.js', 0)
+  .add('keyhandler.js', 1)
+  .add('vendor/bootstrap/bootstrap.bundle.min.js', 1)
+  .add('vendor/jquery/jquery-ui.min.js', 0)
+  .add('vendor/js.cookie.js', 1)
+  .add('vendor/jquery/jquery.mousewheel.js', 0)
+  .add('vendor/jquery/jquery.validate.js', 0)
+  .add('vendor/jquery/jquery-ui-timepicker-addon.js', 0)
+  .add('vendor/jquery/jquery.ba-hashchange-2.0.js', 0)
+  .add('vendor/jquery/jquery.debounce-1.0.6.js', 0)
+  .add('menu_resizer.js', 1)
+  .add('cross_framing_protection.js', 0)
+  .add('rte.js', 1)
+  .add('vendor/tracekit.js', 1)
+  .add('error_report.js', 1)
+  .add('messages.php', 0)
+  .add('config.js', 1)
+  .add('doclinks.js', 1)
+  .add('functions.js', 1)
+  .add('navigation.js', 1)
+  .add('indexes.js', 1)
+  .add('common.js', 1)
+  .add('page_settings.js', 1)
+  .add('drag_drop_import.js', 1)
+  .add('shortcuts_handler.js', 1)
+  .add('table/structure.js', 1)
+  .add('vendor/codemirror/lib/codemirror.js', 0)
+  .add('vendor/codemirror/mode/sql/sql.js', 0)
+  .add('vendor/codemirror/addon/runmode/runmode.js', 0)
+  .add('vendor/codemirror/addon/hint/show-hint.js', 0)
+  .add('vendor/codemirror/addon/hint/sql-hint.js', 0)
+  .add('vendor/codemirror/addon/lint/lint.js', 0)
+  .add('codemirror/addon/lint/sql-lint.js', 0)
+  .add('console.js', 1)
+;
+$(function() {
+        AJAX.fireOnload('vendor/sprintf.js');
+        AJAX.fireOnload('keyhandler.js');
+      AJAX.fireOnload('vendor/bootstrap/bootstrap.bundle.min.js');
+        AJAX.fireOnload('vendor/js.cookie.js');
+                AJAX.fireOnload('menu_resizer.js');
+        AJAX.fireOnload('rte.js');
+      AJAX.fireOnload('vendor/tracekit.js');
+      AJAX.fireOnload('error_report.js');
+        AJAX.fireOnload('config.js');
+      AJAX.fireOnload('doclinks.js');
+      AJAX.fireOnload('functions.js');
+      AJAX.fireOnload('navigation.js');
+      AJAX.fireOnload('indexes.js');
+      AJAX.fireOnload('common.js');
+      AJAX.fireOnload('page_settings.js');
+      AJAX.fireOnload('drag_drop_import.js');
+      AJAX.fireOnload('shortcuts_handler.js');
+      AJAX.fireOnload('table/structure.js');
+                    AJAX.fireOnload('console.js');
+  });
+// ]]>
+</script>
+
+  <noscript><style>html{display:block}</style></noscript>
+<script type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/structure.js(1).download"></script><script type="text/javascript" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/change.js.download"></script></head>
+<body style="margin-bottom: 21.0938px; margin-left: 240px; padding-top: 58.1875px;">
+    <div id="pma_navigation" data-config-navigation-width="240" style="width: 240px;">
+    <div id="pma_navigation_resizer" style="left: 240px; width: 3px;"></div>
+    <div id="pma_navigation_collapser" title="Ocultar panel" style="left: 240px;">←</div>
+    <div id="pma_navigation_content">
+      <div id="pma_navigation_header">
+
+                  <div id="pmalogo">
+                          <a href="http://localhost/phpmyadmin/index.php">
+                                      <img id="imgpmalogo" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/logo_left.png" alt="phpMyAdmin">
+                                      </a>
+                      </div>
+        
+        <div id="navipanellinks">
+          <a href="http://localhost/phpmyadmin/index.php?route=/" title="Página de inicio"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Página de inicio" alt="Página de inicio" class="icon ic_b_home"></a>
+
+                      <a class="logout disableAjax" href="http://localhost/phpmyadmin/index.php?route=/logout" title="Datos de sesión vacíos"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Datos de sesión vacíos" alt="Datos de sesión vacíos" class="icon ic_s_loggoff"></a>
+          
+          <a href="http://localhost/phpmyadmin/doc/html/index.html" title="Documentación de phpMyAdmin" target="_blank" rel="noopener noreferrer"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación de phpMyAdmin" alt="Documentación de phpMyAdmin" class="icon ic_b_docs"></a>
+
+          <a href="http://localhost/phpmyadmin/url.php?url=https%3A%2F%2Fmariadb.com%2Fkb%2Fen%2Fdocumentation%2F" title="MariaDB Documentation" target="_blank" rel="noopener noreferrer"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="MariaDB Documentation" alt="MariaDB Documentation" class="icon ic_b_sqlhelp"></a>
+
+          <a id="pma_navigation_settings_icon" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" title="Ajustes del panel de navegación"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Ajustes del panel de navegación" alt="Ajustes del panel de navegación" class="icon ic_s_cog"></a>
+
+          <a id="pma_navigation_reload" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" title="Recargar el panel de navegación"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Recargar el panel de navegación" alt="Recargar el panel de navegación" class="icon ic_s_reload"></a>
+        </div>
+
+        
+        <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Cargando…" alt="Cargando…" style="visibility: hidden; display:none" class="icon ic_ajax_clock_small throbber">
+      </div>
+      <div id="pma_navigation_tree" class="list_container synced highlight autoexpand" style="height: 875px;">
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Tablas recientes" class="drop_button btn">Reciente</button><ul id="pma_recent_list"><li class="warp_link"><a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=dbdisney&amp;table=personaje">`dbdisney`.`personaje`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=dbdisney&amp;table=pelicula_serie">`dbdisney`.`pelicula_serie`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=dbdisney&amp;table=genero">`dbdisney`.`genero`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=dbdisney&amp;table=pelicula_serie_genero">`dbdisney`.`pelicula_serie_genero`</a></li><li class="warp_link"><a href="http://localhost/phpmyadmin/index.php?route=/table/recent-favorite&amp;db=dbdisney&amp;table=hibernate_sequence">`dbdisney`.`hibernate_sequence`</a></li></ul></div><div class="drop_list"><button title="Tablas favoritas" class="drop_button btn">Favoritas</button><ul id="pma_favorite_list"><li class="warp_link">No existen tablas favoritas.</li></ul></div><div class="clearfloat"></div></div>
+
+<div class="clearfloat"></div>
+
+<ul>
+  
+  <!-- CONTROLS START --><li id="navigation_controls_outer"><div id="navigation_controls"><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" id="pma_navigation_collapse" title="Colapsar todos"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Colapsar todos" alt="Colapsar todos" class="icon ic_s_collapseall"></a><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" id="pma_navigation_sync" title="Deshacer enlace en el panel principal"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Deshacer enlace en el panel principal" alt="Deshacer enlace en el panel principal" class="icon ic_s_link"></a></div></li><!-- CONTROLS ENDS -->
+</ul>
+
+
+
+<div id="pma_navigation_tree_content" style="height: 820.156px;">
+  <ul>
+    <li class="first new_database italics"><div class="block"><i class="first"></i></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/server/databases&amp;server=1"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_newdb"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/server/databases&amp;server=1" title="Nueva">Nueva</a><div class="clearfloat"></div></li><li class="database selected"><div class="block"><i></i><b></b><a class="expander loaded" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.ZGJkaXNuZXk=" data-vpath="cm9vdA==.ZGJkaXNuZXk=" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_minus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=dbdisney&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney" title="Estructura">dbdisney</a><div class="clearfloat"></div><div class="list_container"><ul><span class="hide pos2_nav" data-name="tables" data-value="0" "=""></span><li class="new_table italics new_table italics"><div class="block"><i></i><span class="hide pos2_nav" data-name="tables" data-value="0" "=""></span></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/table/create&amp;server=1&amp;db=dbdisney"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Nueva" alt="Nueva" class="icon ic_b_table_add"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/table/create&amp;server=1&amp;db=dbdisney" title="Nueva">Nueva</a><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.ZGJkaXNuZXk=.dGFibGVz.Z2VuZXJv" data-vpath="cm9vdA==.ZGJkaXNuZXk=.VGFibGFz.Z2VuZXJv" data-pos="0" "=""></span><span class="hide pos2_nav" data-name="tables" data-value="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;server=1&amp;db=dbdisney&amp;table=genero"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/sql&amp;server=1&amp;db=dbdisney&amp;table=genero&amp;pos=0" title="Examinar">genero</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/index.php?route=/navigation" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=genero&amp;dbName=dbdisney" class="hideNavItem ajax"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Ocultar" alt="Ocultar" class="icon ic_hide"></a></span><div class="clearfloat"></div></li><li class="table table"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.ZGJkaXNuZXk=.dGFibGVz.cGVsaWN1bGFfc2VyaWU=" data-vpath="cm9vdA==.ZGJkaXNuZXk=.VGFibGFz.cGVsaWN1bGFfc2VyaWU=" data-pos="0" "=""></span><span class="hide pos2_nav" data-name="tables" data-value="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;server=1&amp;db=dbdisney&amp;table=pelicula_serie"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/sql&amp;server=1&amp;db=dbdisney&amp;table=pelicula_serie&amp;pos=0" title="Examinar">pelicula_serie</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/index.php?route=/navigation" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=pelicula_serie&amp;dbName=dbdisney" class="hideNavItem ajax"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Ocultar" alt="Ocultar" class="icon ic_hide"></a></span><div class="clearfloat"></div></li><li class="table last table"><div class="block"><i></i><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.ZGJkaXNuZXk=.dGFibGVz.cGVyc29uYWpl" data-vpath="cm9vdA==.ZGJkaXNuZXk=.VGFibGFz.cGVyc29uYWpl" data-pos="0" "=""></span><span class="hide pos2_nav" data-name="tables" data-value="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;server=1&amp;db=dbdisney&amp;table=personaje"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/sql&amp;server=1&amp;db=dbdisney&amp;table=personaje&amp;pos=0" title="Examinar">personaje</a><span class="navItemControls"><a href="http://localhost/phpmyadmin/index.php?route=/navigation" data-post="hideNavItem=1&amp;itemType=table&amp;itemName=personaje&amp;dbName=dbdisney" class="hideNavItem ajax"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Ocultar" alt="Ocultar" class="icon ic_hide"></a></span><div class="clearfloat"></div></li></ul></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-vpath="cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=information_schema&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=information_schema" title="Estructura">information_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.bXlzcWw=" data-vpath="cm9vdA==.bXlzcWw=" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=mysql&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=mysql" title="Estructura">mysql</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-vpath="cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=performance_schema&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=performance_schema" title="Estructura">performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class="block"><i></i><b></b><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.cGhwbXlhZG1pbg==" data-vpath="cm9vdA==.cGhwbXlhZG1pbg==" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=phpmyadmin&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=phpmyadmin" title="Estructura">phpmyadmin</a><div class="clearfloat"></div></li><li class="last database"><div class="block"><i></i><a class="expander" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><span class="hide paths_nav" data-apath="cm9vdA==.dGVzdA==" data-vpath="cm9vdA==.dGVzdA==" data-pos="0" "=""></span><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Expandir/Colapsar" alt="Expandir/Colapsar" class="icon ic_b_plus"></a></div><div class="block second"><a href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;server=1&amp;db=test&amp;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Opciones de la base de datos" alt="Opciones de la base de datos" class="icon ic_s_db"></a></div><a class="hover_show_full" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=test" title="Estructura">test</a><div class="clearfloat"></div></li>
+  </ul>
+</div>
+
+
+</div>
+
+      <div id="pma_navi_settings_container">
+                  
+              </div>
+    </div>
+
+          <div class="pma_drop_handler">
+        Suelte aquí los archivos      </div>
+      <div class="pma_sql_import_status">
+        <h2>
+          SQL upload          ( <span class="pma_import_count">0</span> )
+          <span class="close">x</span>
+          <span class="minimize">-</span>
+        </h2>
+        <div></div>
+      </div>
+      </div>
+
+  
+  
+
+  
+      
+  
+      <div id="floating_menubar" style="margin-left: 243px; left: 0px; position: fixed; top: 0px; width: 100%; z-index: 99;">
+<nav id="server-breadcrumb" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_host">
+      <a href="http://localhost/phpmyadmin/index.php?route=/" data-raw-text="localhost:3306">
+        Servidor:        localhost:3306
+      </a>
+    </li>
+
+          <li class="breadcrumb-item">
+        <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_db">
+        <a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney" data-raw-text="dbdisney">
+          Base de datos:          dbdisney
+        </a>
+      </li>
+
+            </ol>
+</nav>
+<div id="topmenucontainer" class="menucontainer">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-label="Toggle navigation" aria-controls="navbarNav" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="width: auto; overflow: visible;">
+      <ul id="topmenu" class="navbar-nav">
+                  <li class="nav-item active">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props">&nbsp;Estructura
+                              <span class="sr-only">(actual)</span>
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/sql&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql">&nbsp;SQL
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/search&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Buscar" alt="Buscar" class="icon ic_b_search">&nbsp;Buscar
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/multi-table-query&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Generar una consulta" alt="Generar una consulta" class="icon ic_s_db">&nbsp;Generar una consulta
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/export&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Exportar" alt="Exportar" class="icon ic_b_export">&nbsp;Exportar
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/import&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Importar" alt="Importar" class="icon ic_b_import">&nbsp;Importar
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/operations&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Operaciones" alt="Operaciones" class="icon ic_b_tblops">&nbsp;Operaciones
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/server/privileges&amp;db=dbdisney&amp;checkprivsdb=dbdisney&amp;viewing_mode=db">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Privilegios" alt="Privilegios" class="icon ic_s_rights">&nbsp;Privilegios
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/routines&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Rutinas" alt="Rutinas" class="icon ic_b_routines">&nbsp;Rutinas
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/events&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Eventos" alt="Eventos" class="icon ic_b_events">&nbsp;Eventos
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/triggers&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Disparadores" alt="Disparadores" class="icon ic_b_triggers">&nbsp;Disparadores
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/tracking&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Seguimiento" alt="Seguimiento" class="icon ic_eye">&nbsp;Seguimiento
+                          </a>
+          </li>
+                  <li class="nav-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/designer&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Diseñador" alt="Diseñador" class="icon ic_b_relations">&nbsp;Diseñador
+                          </a>
+          </li>
+                  
+              <li class="nav-item dropdown" style=""><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img alt="" title="" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" class="icon ic_b_more">Más</a><ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"><li class="dropdown-item">
+            <a class="nav-link text-nowrap" href="http://localhost/phpmyadmin/index.php?route=/database/central-columns&amp;db=dbdisney">
+              <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Columnas centrales" alt="Columnas centrales" class="icon ic_centralColumns">&nbsp;Columnas centrales
+                          </a>
+          </li></ul></li></ul>
+    </div>
+  </nav>
+</div>
+</div>
+
+
+
+    <span id="page_nav_icons">
+      <span id="lock_page_icon"></span>
+      <span id="page_settings_icon" style="display: inline;">
+        <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Ajustes de página relacionada" alt="Ajustes de página relacionada" class="icon ic_s_cog">
+      </span>
+      <a id="goto_pagetop" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Pulse en la barra para deslizarse al tope de la página" alt="Pulse en la barra para deslizarse al tope de la página" class="icon ic_s_top"></a>
+    </span>
+  
+  <div id="pma_console_container">
+    <div id="pma_console" style="margin-left: 243px;">
+                <div class="toolbar collapsed">
+                    <div class="switch_button console_switch">
+            <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Consola de consultas SQL" alt="Consola de consultas SQL" class="icon ic_console">
+            <span>Consola</span>
+        </div>
+                            <div class="button clear">
+            
+            <span>Limpiar</span>
+        </div>
+                            <div class="button history">
+            
+            <span>Historial</span>
+        </div>
+                            <div class="button options">
+            
+            <span>Opciones</span>
+        </div>
+                            <div class="button bookmarks">
+            
+            <span>Favoritos</span>
+        </div>
+                            <div class="button debug hide">
+            
+            <span>Depuración SQL</span>
+        </div>
+            </div>
+                <div class="content" style="height: 98.248px; margin-bottom: -98.2344px; display: none;">
+            <div class="console_message_container">
+                <div class="message welcome binded">
+                    <span id="instructions-0">
+                        Presione Ctrl+Enter para ejecutar la consulta                    </span>
+                    <span class="hide" id="instructions-1">
+                        Presione Enter para ejecutar la consulta                    </span>
+                </div>
+                                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="hibernate_sequence">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `hibernate_sequence`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="pelicula_serie">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `pelicula_serie`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="personaje">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `personaje`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="pelicula_serie_genero">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `pelicula_serie_genero`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="personaje">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `personaje`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="genero">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `genero`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="hibernate_sequence">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `hibernate_sequence`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="pelicula_serie">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `pelicula_serie`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="personaje">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `personaje`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="genero">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `genero`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="pelicula_serie_genero">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `pelicula_serie_genero`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="genero">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `genero`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="pelicula_serie">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `pelicula_serie`</span>
+                        </div>
+                                            <div class="message history collapsed hide select binded" targetdb="dbdisney" targettable="personaje">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span>durante la sesión actual</span>
+                    </span>
+            </div>
+                            <span class="query highlighted"><span class="cm-keyword">SELECT</span> <span class="cm-operator">*</span> <span class="cm-keyword">FROM</span> `personaje`</span>
+                        </div>
+                                                <div class="message collapsed binded successed" msgid="611822595600" targetdb="dbdisney" targettable="hibernate_sequence"><div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time" title="Thu Oct 21 2021 19:44:56 GMT-0300 (Argentina Standard Time)">
+            Fecha y hora la consulta
+                            : <span>19:44:56</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">DROP</span> <span class="cm-keyword">TABLE</span> `hibernate_sequence`</div></div><div class="message collapsed binded successed" msgid="928740105974" targetdb="dbdisney" targettable="pelicula_serie_genero"><div class="action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span>dbdisney</span>
+                    </span>
+                            <span class="text query_time" title="Thu Oct 21 2021 19:45:07 GMT-0300 (Argentina Standard Time)">
+            Fecha y hora la consulta
+                            : <span>19:45:7</span>
+                    </span>
+            </div><div class="query highlighted"><span class="cm-keyword">DROP</span> <span class="cm-keyword">TABLE</span> `pelicula_serie_genero`</div></div></div><!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -21px; border-right-width: 29px; min-height: 19px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 19px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 29px; width: 1px; border-bottom: 0px solid transparent; top: 19px;"></div><div class="CodeMirror-gutters" style="height: 48px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+            </div>
+        </div><!-- message end -->
+                <div class="mid_layer"></div>
+                <div class="card ungrouped" id="debug_console">
+            <div class="toolbar ">
+                    <div class="button order order_asc active">
+            
+            <span>ascendente</span>
+        </div>
+                            <div class="button order order_desc">
+            
+            <span>descendente</span>
+        </div>
+                            <div class="text">
+            
+            <span>Orden:</span>
+        </div>
+                            <div class="switch_button">
+            
+            <span>Depuración SQL</span>
+        </div>
+                            <div class="button order_by sort_count">
+            
+            <span>Cantidad</span>
+        </div>
+                            <div class="button order_by sort_exec active">
+            
+            <span>Orden de ejecución</span>
+        </div>
+                            <div class="button order_by sort_time">
+            
+            <span>Tiempo necesario</span>
+        </div>
+                            <div class="text">
+            
+            <span>Ordenar por:</span>
+        </div>
+                            <div class="button group_queries">
+            
+            <span>Consultas grupales</span>
+        </div>
+                            <div class="button ungroup_queries">
+            
+            <span>Desagrupar las consultas</span>
+        </div>
+            </div>
+            <div class="content debug" style="height: 98.248px;">
+                <div class="message welcome binded">Ocurrió un error al obtener información de depuración SQL.</div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action dbg_show_trace">
+            Mostrar rastro
+                    </span>
+                            <span class="action dbg_hide_trace">
+            Ocultar rastro
+                    </span>
+                            <span class="text count hide">
+            Cantidad
+                    </span>
+                            <span class="text time">
+            Tiempo necesario
+                    </span>
+            </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                    <div class="card" id="pma_bookmarks">
+                <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Favoritos</span>
+        </div>
+                            <div class="button refresh">
+            
+            <span>Actualizar</span>
+        </div>
+                            <div class="button add">
+            
+            <span>Agregar</span>
+        </div>
+            </div>
+                <div class="content bookmark" style="height: 98.248px;">
+                    <div class="message welcome binded">
+    <span>Ningún favorito</span>
+</div>
+
+                </div>
+                <div class="mid_layer"></div>
+                <div class="card add">
+                    <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Agregar favorito</span>
+        </div>
+            </div>
+                    <div class="content add_bookmark" style="height: 101px;">
+                        <div class="options">
+                            <label>
+                                Etiqueta: <input type="text" name="label">
+                            </label>
+                            <label>
+                                Base de datos de destino: <input type="text" name="targetdb">
+                            </label>
+                            <label>
+                                <input type="checkbox" name="shared">Compartir favorito                            </label>
+                            <button class="btn btn-primary" type="submit" name="submit">OK</button>
+                        </div> <!-- options -->
+                        <div class="query_input">
+                            <span class="bookmark_add_input"><div class="CodeMirror cm-s-pma CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 16px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -21px; border-right-width: 29px; min-height: 19px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 0px; top: 0px; height: 19px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 29px; width: 1px; border-bottom: 0px solid transparent; top: 19px;"></div><div class="CodeMirror-gutters" style="height: 48px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div></div></div></div></span>
+                        </div>
+                    </div>
+                </div> <!-- Add bookmark card -->
+            </div> <!-- Bookmarks card -->
+                        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Opciones</span>
+        </div>
+                            <div class="button default">
+            
+            <span>Definir predeterminado</span>
+        </div>
+            </div>
+            <div class="content" style="height: 101px;">
+                <label>
+                    <input type="checkbox" name="always_expand">Siempre expandir mensajes de consultas                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Mostrar histórico de consultas al iniciar                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query">Mostrar consulta de navegación actual                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Ejecute consultas con Enter e introduce la nueva línea con Shift + Enter. Para que esto permanezca, vea la configuración.                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Cambiar al tema oscuro                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+                        <div class="query_actions">
+                    <span class="action collapse">
+            Colapsar
+                    </span>
+                            <span class="action expand">
+            Expandir
+                    </span>
+                            <span class="action requery">
+            Reconsultar
+                    </span>
+                            <span class="action edit">
+            Editar
+                    </span>
+                            <span class="action explain">
+            Explicar
+                    </span>
+                            <span class="action profiling">
+            Perfilando
+                    </span>
+                            <span class="action bookmark">
+            Agregar a favoritos
+                    </span>
+                            <span class="text failed">
+            Falló la consulta
+                    </span>
+                            <span class="text targetdb">
+            Base de datos
+                            : <span></span>
+                    </span>
+                            <span class="text query_time">
+            Fecha y hora la consulta
+                            : <span></span>
+                    </span>
+            </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+
+
+  <div id="page_content"><div id="loading_parent"></div><div id="page_settings_modal"><div class="page_settings"><form method="post" action="http://localhost/phpmyadmin/index.php?route=%2Fdatabase%2Fstructure&amp;db=dbdisney&amp;server=1" class="config-form disableAjax">
+  <input type="hidden" name="tab_hash" value="">
+      <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="">
+    <input type="hidden" name="token" value="3a74772e245a73673f5d244e4c292558">
+  <input type="hidden" name="submit_save" value="DbStructure">
+<ul class="tabs responsivetable row">
+      <li class="active"><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#DbStructure">Estructura de base de datos</a></li>
+  </ul>
+<div class="tabs_contents col">
+<fieldset class="optbox" id="DbStructure" style="">
+<legend>Estructura de base de datos</legend>
+    <p>Elija los detalles a mostrar en la estructura de base de datos (lista de tablas).</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="ShowDbStructureCharset">Mostrar conjunto de caracteres de la tabla</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDbStructureCharset" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar u ocultar una columna, mostrando conjunto de caracteres de todas las tablas.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDbStructureCharset" id="ShowDbStructureCharset"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDbStructureCharset" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="ShowDbStructureComment">Mostrar comentarios de la tabla</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDbStructureComment" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar u ocultar una columna, mostrando los comentarios de todas las tablas.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDbStructureComment" id="ShowDbStructureComment"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDbStructureComment" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="ShowDbStructureCreation">Mostrar marca temporal de creación</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDbStructureCreation" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar o esconder una columna con las marcas temporales de creación para todas las tablas.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDbStructureCreation" id="ShowDbStructureCreation"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDbStructureCreation" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="ShowDbStructureLastUpdate">Mostrar marca temporal de la última actualización</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDbStructureLastUpdate" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar o esconder una columna con la marca temporal de la última actualización para todas las tablas.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDbStructureLastUpdate" id="ShowDbStructureLastUpdate"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDbStructureLastUpdate" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="ShowDbStructureLastCheck">Mostrar marca temporal de la última revisión</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDbStructureLastCheck" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar o esconder una columna con la marca temporal de la última revisión para todas las tablas.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDbStructureLastCheck" id="ShowDbStructureLastCheck"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDbStructureLastCheck" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+    if (typeof configInlineParams === 'undefined' || !Array.isArray(configInlineParams)) {
+        configInlineParams = [];
+    }
+    configInlineParams.push(function () {
+        $.extend(Messages, {
+	'error_nan_p': '¡No es un número positivo!',
+	'error_nan_nneg': '¡No es un número no-negativo!',
+	'error_incorrect_port': '¡No es un número de puerto válido!',
+	'error_invalid_value': '¡Valor incorrecto!',
+	'error_value_lte': '¡El valor debe ser igual o menor que %s!'});
+$.extend(defaultValues, {
+	'ShowDbStructureCharset': false,
+	'ShowDbStructureComment': false,
+	'ShowDbStructureCreation': false,
+	'ShowDbStructureLastUpdate': false,
+	'ShowDbStructureLastCheck': false});
+    });
+    if (typeof configScriptLoaded !== 'undefined' && configInlineParams) {
+        loadInlineConfig();
+    }
+</script>
+</div></div>  <div id="tableslistcontainer">
+    
+
+    <div class="row">
+	<div class="col-12">
+		<fieldset id="tableFilter">
+		    <legend>Filtros</legend>
+		    <div class="formelement">
+		        <label for="filterText">Que contengan la palabra:</label>
+		        <input name="filterText" type="text" id="filterText" value="">
+		    </div>
+		</fieldset>
+	</div>
+</div>
+<form method="post" action="http://localhost/phpmyadmin/index.php?route=/database/structure" name="tablesForm" id="tablesForm">
+<input type="hidden" name="db" value="dbdisney"><input type="hidden" name="token" value="3a74772e245a73673f5d244e4c292558">
+<div class="table-responsive">
+<table class="table table-light table-striped table-hover table-sm w-auto data">
+    <thead class="thead-light">
+        <tr>
+            <th class="d-print-none"></th>
+            <th><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=table&amp;sort_order=DESC" title="Ordenar" onmouseover="$(&#39;.sort_arrow&#39;).toggle();" onmouseout="$(&#39;.sort_arrow&#39;).toggle();">Tabla <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="Ascendente" class="icon ic_s_asc sort_arrow" style=""> <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="Descendente" class="icon ic_s_desc sort_arrow hide" style="display: none;"></a></th>
+            
+                                                                                            <th colspan="7" class="d-print-none">
+                Acción            </th>
+                        <th>
+                <a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=records&amp;sort_order=DESC" title="Ordenar">Filas</a>
+                <span class="pma_hint"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_help"><span class="hide">Podría ser aproximado. Pulse en el número para obtener la cantidad exacta. Ver <a href="http://localhost/phpmyadmin/doc/html/faq.html#faq3-11" target="documentation">FAQ 3.11</a>.</span></span>
+            </th>
+                            <th><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=type&amp;sort_order=ASC" title="Ordenar">Tipo</a></th>
+                <th><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=collation&amp;sort_order=ASC" title="Ordenar">Cotejamiento</a></th>
+            
+                                            <th><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=size&amp;sort_order=DESC" title="Ordenar">Tamaño</a></th>
+                                <th><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;db=dbdisney&amp;pos=0&amp;sort=overhead&amp;sort_order=DESC" title="Ordenar">Residuo a depurar</a></th>
+            
+            
+            
+            
+            
+                    </tr>
+    </thead>
+    <tbody>
+            <tr id="row_tbl_1" data-filter-row="GENERO">
+    <td class="text-center d-print-none">
+        <input type="checkbox" name="selected_tbl[]" class="checkall" value="genero" id="checkbox_tbl_1">
+    </td>
+    <th>
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=genero&amp;pos=0" title="">
+            genero
+        </a>
+        
+    </th>
+    
+                <td class="text-center d-print-none">
+                                    <a id="047a230933288de643e3b0d47d483c12_favorite_anchor" class="ajax favorite_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/database/structure/favorite-table&amp;db=dbdisney&amp;ajax_request=1&amp;favorite_table=genero&amp;add_favorite=1" title="Agregar a Favoritos" data-favtargets="7ba7ea68631b07590a7df3678ad78bac">
+    <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_no_favorite">&nbsp;</span>
+</a>
+        </td>
+    
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=genero&amp;pos=0">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Examinar" alt="Examinar" class="icon ic_bd_browse">&nbsp;Examinar</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=genero">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props">&nbsp;Estructura</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/search&amp;db=dbdisney&amp;table=genero">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Buscar" alt="Buscar" class="icon ic_bd_select">&nbsp;Buscar</span>
+        </a>
+    </td>
+
+            <td class="insert_table text-center d-print-none">
+            <a href="http://localhost/phpmyadmin/index.php?route=/table/change&amp;db=dbdisney&amp;table=genero"><span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Insertar" alt="Insertar" class="icon ic_b_insrow">&nbsp;Insertar</span></a>
+        </td>
+                  <td class="text-center d-print-none">
+                <a class="truncate_table_anchor ajax" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=genero&amp;sql_query=TRUNCATE+%60genero%60&amp;message_to_show=Se%2Bha%2Bvaciado%2Bla%2Btabla%2Bgenero.">
+                  <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Vaciar" alt="Vaciar" class="icon ic_bd_empty">&nbsp;Vaciar</span>
+                </a>
+          </td>
+                <td class="text-center d-print-none">
+            <a class="ajax drop_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=genero&amp;reload=1&amp;purge=1&amp;sql_query=DROP+TABLE+%60genero%60&amp;message_to_show=Se+ha+eliminado+la+tabla+genero.">
+                <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span>
+            </a>
+        </td>
+    
+                    
+                <td class="value tbl_rows text-monospace text-right" data-table="genero">
+                            0
+                        
+        </td>
+
+                    <td class="nowrap">
+                                    MyISAM
+                            </td>
+                            <td class="nowrap">
+                    <dfn title="Unicode (UCA 4.0.0), independiente de mayúsculas y minúsculas">utf8mb4_general_ci</dfn>
+
+                </td>
+                    
+                    <td class="value tbl_size text-monospace text-right">
+                <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=genero#showusage">
+                    <span>1.0</span>&nbsp;<span class="unit">KB</span>
+                </a>
+            </td>
+            <td class="value tbl_overhead text-monospace text-right">
+                -
+            </td>
+        
+                            
+        
+        
+        
+        
+    </tr>
+            
+            <tr id="row_tbl_3" data-filter-row="PELICULA_SERIE">
+    <td class="text-center d-print-none">
+        <input type="checkbox" name="selected_tbl[]" class="checkall" value="pelicula_serie" id="checkbox_tbl_3">
+    </td>
+    <th>
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=pelicula_serie&amp;pos=0" title="">
+            pelicula_serie
+        </a>
+        
+    </th>
+    
+                <td class="text-center d-print-none">
+                                    <a id="cd9964624669ec78a439e7c783d8b46a_favorite_anchor" class="ajax favorite_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/database/structure/favorite-table&amp;db=dbdisney&amp;ajax_request=1&amp;favorite_table=pelicula_serie&amp;add_favorite=1" title="Agregar a Favoritos" data-favtargets="3c8ff11a11c509f9eb50f6da93081248">
+    <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_no_favorite">&nbsp;</span>
+</a>
+        </td>
+    
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=pelicula_serie&amp;pos=0">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Examinar" alt="Examinar" class="icon ic_bd_browse">&nbsp;Examinar</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=pelicula_serie">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props">&nbsp;Estructura</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/search&amp;db=dbdisney&amp;table=pelicula_serie">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Buscar" alt="Buscar" class="icon ic_bd_select">&nbsp;Buscar</span>
+        </a>
+    </td>
+
+            <td class="insert_table text-center d-print-none">
+            <a href="http://localhost/phpmyadmin/index.php?route=/table/change&amp;db=dbdisney&amp;table=pelicula_serie"><span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Insertar" alt="Insertar" class="icon ic_b_insrow">&nbsp;Insertar</span></a>
+        </td>
+                  <td class="text-center d-print-none">
+                <a class="truncate_table_anchor ajax" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=pelicula_serie&amp;sql_query=TRUNCATE+%60pelicula_serie%60&amp;message_to_show=Se%2Bha%2Bvaciado%2Bla%2Btabla%2Bpelicula_serie.">
+                  <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Vaciar" alt="Vaciar" class="icon ic_bd_empty">&nbsp;Vaciar</span>
+                </a>
+          </td>
+                <td class="text-center d-print-none">
+            <a class="ajax drop_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=pelicula_serie&amp;reload=1&amp;purge=1&amp;sql_query=DROP+TABLE+%60pelicula_serie%60&amp;message_to_show=Se+ha+eliminado+la+tabla+pelicula_serie.">
+                <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span>
+            </a>
+        </td>
+    
+                    
+                <td class="value tbl_rows text-monospace text-right" data-table="pelicula_serie">
+                            0
+                        
+        </td>
+
+                    <td class="nowrap">
+                                    MyISAM
+                            </td>
+                            <td class="nowrap">
+                    <dfn title="Unicode (UCA 4.0.0), independiente de mayúsculas y minúsculas">utf8mb4_general_ci</dfn>
+
+                </td>
+                    
+                    <td class="value tbl_size text-monospace text-right">
+                <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=pelicula_serie#showusage">
+                    <span>1.0</span>&nbsp;<span class="unit">KB</span>
+                </a>
+            </td>
+            <td class="value tbl_overhead text-monospace text-right">
+                -
+            </td>
+        
+                            
+        
+        
+        
+        
+    </tr>
+            
+            <tr id="row_tbl_5" data-filter-row="PERSONAJE">
+    <td class="text-center d-print-none">
+        <input type="checkbox" name="selected_tbl[]" class="checkall" value="personaje" id="checkbox_tbl_5">
+    </td>
+    <th>
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=personaje&amp;pos=0" title="">
+            personaje
+        </a>
+        
+    </th>
+    
+                <td class="text-center d-print-none">
+                                    <a id="56de844e3a04d7f05dc0fbb46d4dcc61_favorite_anchor" class="ajax favorite_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/database/structure/favorite-table&amp;db=dbdisney&amp;ajax_request=1&amp;favorite_table=personaje&amp;add_favorite=1" title="Agregar a Favoritos" data-favtargets="c7aa5727a47015f2fc925ca96edccdab">
+    <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_no_favorite">&nbsp;</span>
+</a>
+        </td>
+    
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/sql&amp;db=dbdisney&amp;table=personaje&amp;pos=0">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Examinar" alt="Examinar" class="icon ic_bd_browse">&nbsp;Examinar</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=personaje">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Estructura" alt="Estructura" class="icon ic_b_props">&nbsp;Estructura</span>
+        </a>
+    </td>
+    <td class="text-center d-print-none">
+        <a href="http://localhost/phpmyadmin/index.php?route=/table/search&amp;db=dbdisney&amp;table=personaje">
+          <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Buscar" alt="Buscar" class="icon ic_bd_select">&nbsp;Buscar</span>
+        </a>
+    </td>
+
+            <td class="insert_table text-center d-print-none">
+            <a href="http://localhost/phpmyadmin/index.php?route=/table/change&amp;db=dbdisney&amp;table=personaje"><span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Insertar" alt="Insertar" class="icon ic_b_insrow">&nbsp;Insertar</span></a>
+        </td>
+                  <td class="text-center d-print-none">
+                <a class="truncate_table_anchor ajax" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=personaje&amp;sql_query=TRUNCATE+%60personaje%60&amp;message_to_show=Se%2Bha%2Bvaciado%2Bla%2Btabla%2Bpersonaje.">
+                  <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Vaciar" alt="Vaciar" class="icon ic_bd_empty">&nbsp;Vaciar</span>
+                </a>
+          </td>
+                <td class="text-center d-print-none">
+            <a class="ajax drop_table_anchor" href="http://localhost/phpmyadmin/index.php?route=/sql" data-post="db=dbdisney&amp;table=personaje&amp;reload=1&amp;purge=1&amp;sql_query=DROP+TABLE+%60personaje%60&amp;message_to_show=Se+ha+eliminado+la+tabla+personaje.">
+                <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Eliminar" alt="Eliminar" class="icon ic_b_drop">&nbsp;Eliminar</span>
+            </a>
+        </td>
+    
+                    
+                <td class="value tbl_rows text-monospace text-right" data-table="personaje">
+                            0
+                        
+        </td>
+
+                    <td class="nowrap">
+                                    MyISAM
+                            </td>
+                            <td class="nowrap">
+                    <dfn title="Unicode (UCA 4.0.0), independiente de mayúsculas y minúsculas">utf8mb4_general_ci</dfn>
+
+                </td>
+                    
+                    <td class="value tbl_size text-monospace text-right">
+                <a href="http://localhost/phpmyadmin/index.php?route=/table/structure&amp;db=dbdisney&amp;table=personaje#showusage">
+                    <span>1.0</span>&nbsp;<span class="unit">KB</span>
+                </a>
+            </td>
+            <td class="value tbl_overhead text-monospace text-right">
+                -
+            </td>
+        
+                            
+        
+        
+        
+        
+    </tr>
+        </tbody>
+            <tfoot id="tbl_summary_row" class="thead-light">
+<tr>
+    <th class="d-print-none"></th>
+    <th class="tbl_num text-nowrap">3 tabla(s)</th>
+                <th colspan="7" class="d-print-none">Número de filas</th>
+                                                <th class="value tbl_rows text-monospace text-right">0</th>
+                                    <th class="text-center">
+            <dfn title="InnoDB es el motor de almacenamiento predeterminado en este servidor MySQL.">
+                InnoDB
+            </dfn>
+        </th>
+        <th>
+                            <dfn title="Unicode (UCA 4.0.0), independiente de mayúsculas y minúsculas (Predeterminado)">
+                    utf8mb4_general_ci
+                </dfn>
+                    </th>
+    
+                                    <th class="value tbl_size text-monospace text-right">3 KB</th>
+
+                                <th class="value tbl_overhead text-monospace text-right">0 B</th>
+    
+                    </tr>
+</tfoot>
+    </table>
+</div>
+    <div class="clearfloat print_ignore">
+    <img class="selectallarrow" src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/arrow_ltr.png" width="38" height="22" alt="Para los elementos que están marcados:">
+    <input type="checkbox" id="tablesForm_checkall" class="checkall_box" title="Seleccionar todo">
+    <label for="tablesForm_checkall">Seleccionar todo</label>
+        <select name="submit_mult" style="margin: 0 3em 0 3em;">
+        <option value="Para los elementos que están marcados:" selected="selected">Para los elementos que están marcados:</option>
+        <option value="copy_tbl">Copiar tabla</option>
+        <option value="show_create">Mostrar creación</option>
+        <option value="export">Exportar</option>
+                    <optgroup label="Borrar datos o tabla">
+                <option value="empty_tbl">Vaciar</option>
+                <option value="drop_tbl">Eliminar</option>
+            </optgroup>
+            <optgroup label="Mantenimiento de la tabla">
+                <option value="analyze_tbl">Analizar la tabla</option>
+                <option value="check_tbl">Revisar la tabla</option>
+                <option value="checksum_tbl">Tabla de suma de comprobación</option>
+                <option value="optimize_tbl">Optimizar la tabla</option>
+                <option value="repair_tbl">Reparar la tabla</option>
+            </optgroup>
+            <optgroup label="Prefijo">
+                <option value="add_prefix_tbl">Agregar prefijo a la tabla</option>
+                <option value="replace_prefix_tbl">Reemplazar prefijo de la tabla</option>
+                <option value="copy_tbl_change_prefix">Copiar tabla con prefijo</option>
+            </optgroup>
+                            <optgroup label="Columnas centrales">
+                <option value="sync_unique_columns_central_list">Agregar columnas a la lista central</option>
+                <option value="delete_unique_columns_central_list">Eliminar columnas de la lista central</option>
+                <option value="make_consistent_with_central_list">Hacer consistente con la lista central</option>
+            </optgroup>
+            </select>
+    
+</div>
+</form>
+
+
+    
+  </div>
+  <hr>
+  <p class="print_ignore">
+    <a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#" id="printView">
+      <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Imprimir" alt="Imprimir" class="icon ic_b_print">&nbsp;Imprimir</span>
+    </a>
+    <a href="http://localhost/phpmyadmin/index.php?route=/database/data-dictionary&amp;db=dbdisney&amp;goto=index.php%3Froute%3D%2Fdatabase%2Fstructure" target="print_view">
+      <span class="nowrap"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Diccionario de datos" alt="Diccionario de datos" class="icon ic_b_tblanalyse">&nbsp;Diccionario de datos</span>
+    </a>
+  </p>
+
+  <form id="create_table_form_minimal" method="post" action="http://localhost/phpmyadmin/index.php?route=/table/create" class="lock-page">
+    <fieldset>
+        <legend>
+        <img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_b_table_add">        Crear tabla        </legend>
+        <input type="hidden" name="db" value="dbdisney"><input type="hidden" name="token" value="3a74772e245a73673f5d244e4c292558">
+        <div class="formelement">
+            Nombre:
+            <input type="text" name="table" maxlength="64" size="30" required="required">
+        </div>
+        <div class="formelement">
+            Número de columnas:
+            <input type="number" min="1" name="num_fields" value="4" required="required">
+        </div>
+        <div class="clearfloat"></div>
+    </fieldset>
+    <fieldset class="tblFooters">
+        <input class="btn btn-primary" type="submit" value="Continuar">
+    </fieldset>
+</form>
+
+</div>
+  
+  <div id="selflink" class="print_ignore"><a href="http://localhost/phpmyadmin/index.php?route=%2Fdatabase%2Fstructure&amp;db=dbdisney&amp;server=1" title="Abrir nueva ventana de phpMyAdmin" target="_blank" rel="noopener noreferrer"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Abrir nueva ventana de phpMyAdmin" alt="Abrir nueva ventana de phpMyAdmin" class="icon ic_window-new"></a></div>
+
+  
+
+  
+
+
+
+  
+  
+  
+
+<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="pma_navigation_settings" aria-labelledby="ui-id-4" style="position: fixed; height: auto; width: 700px; top: 52.0544px; left: 586px;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-4" class="ui-dialog-title">Ajustes de página relacionada</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="pma_navigation_settings" class="ui-dialog-content ui-widget-content" style="display: block; width: auto; min-height: 136.047px; max-height: 706.047px; height: auto;"><div class="page_settings"><form method="post" action="http://localhost/phpmyadmin/index.php?route=%2Fdatabase%2Fstructure&amp;db=dbdisney&amp;server=1" class="config-form disableAjax">
+  <input type="hidden" name="tab_hash" value="">
+      <input type="hidden" name="check_page_refresh" id="check_page_refresh" value="1">
+    <input type="hidden" name="token" value="3a74772e245a73673f5d244e4c292558">
+  <input type="hidden" name="submit_save" value="Navi">
+<ul class="tabs responsivetable row">
+      <li class="active"><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#Navi_panel">Panel de navegación</a></li>
+      <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#Navi_tree">Árbol de navegación</a></li>
+      <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#Navi_servers">Servidores</a></li>
+      <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#Navi_databases">Bases de datos</a></li>
+      <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#Navi_tables">Tablas</a></li>
+  </ul>
+<div class="tabs_contents col">
+<fieldset class="optbox" id="Navi_panel" style="">
+<legend>Panel de navegación</legend>
+    <p>Cambiar la apariencia del panel de navegación.</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="ShowDatabasesNavigationAsTree">Mostrar las bases de datos navegación como árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>En el panel de navegación, reemplaza el árbol de base de datos con un selector</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#ShowDatabasesNavigationAsTree" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLinkWithMainPanel">Enlace al panel principal</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Enlace con el panel principal resaltando la base de datos o tabla actual.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationLinkWithMainPanel" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationDisplayLogo">Mostrar el logo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar el logo en el panel de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationDisplayLogo" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLink">URL para enlace del logo</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>URL a la que apuntará el logo en el panel de navegación.</small></th><td><input type="text" class="w-75" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationLogoLink" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationLogoLinkWindow">Logo destino del enlace</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Abrir la página enlazada en la ventana principal (<code>principal</code>) o en una nueva (<code>nueva</code>).</small></th><td><select class="w-75" name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow"><option value="main" selected="selected">main</option><option value="new">new</option></select><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationLogoLinkWindow" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreePointerEnable">Permitir destacar</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Resaltar servidor bajo el cursor.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreePointerEnable" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="FirstLevelNavigationItems">Cantidad máxima de elementos en el primer nivel</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>El número de elementos que pueden ser mostrados en cada página en el primer nivel del árbol de navegación.</small></th><td><input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#FirstLevelNavigationItems" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDisplayItemFilterMinimum">Número mínimo de elementos para mostrar la caja de filtro</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Define el número mínimo de elementos (tablas, vistas, rutinas y eventos) para mostrar un cuadro de filtro.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeDisplayItemFilterMinimum" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumRecentTables">Tablas recientemente utilizadas</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Número máximo de tablas recientemente utilizadas; 0 para desactivar.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NumRecentTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NumFavoriteTables">Tablas favoritas</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cantidad máxima de tablas favoritas; 0 para desactivar.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NumFavoriteTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationWidth">Anchura del panel de navegación</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Asignar 0 para ocular el panel de navegación.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" value="240"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationWidth" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tree" style="display: none;">
+<legend>Árbol de navegación</legend>
+    <p>Personalizar el árbol de navegación.</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="MaxNavigationItems">Cantidad máxima de elementos en una rama</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>El número de elementos que pueden ser mostrados en cada página del árbol de navegación.</small></th><td><input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#MaxNavigationItems" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableGrouping">Agrupar elementos en el árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Agrupar elementos en el árbol de navegación (determinado por el separador definido abajo en las pestañas superiores de Bases de datos y Tablas).</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeEnableGrouping" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeEnableExpansion">Activar la expansión del árbol de navegación</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si tendrá la posibilidad de expandir el árbol en el panel de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeEnableExpansion" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowTables">Mostrar tablas en árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran las tablas bajo base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeShowTables" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowViews">Mostrar vistas en árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran vistas bajo base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeShowViews" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowFunctions">Mostrar funciones en árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran las funciones bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeShowFunctions" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowProcedures">Mostrar procedimientos en árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran los procedimientos bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeShowProcedures" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeShowEvents">Mostrar eventos en árbol</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se muestran eventos bajo la base de datos en el árbol de navegación</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeShowEvents" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeAutoexpandSingleDb">Expandir la base de datos única</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeAutoexpandSingleDb" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Si se debe desglosar automáticamente una base de datos individual en el árbol de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeAutoexpandSingleDb" id="NavigationTreeAutoexpandSingleDb" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeAutoexpandSingleDb" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_servers" style="display: none;">
+<legend>Servidores</legend>
+    <p>Opciones para visualizar los servidores.</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationDisplayServers">Mostrar la selección de servidores</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationDisplayServers" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar la elección de servidor en la parte superior del panel de navegación.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayServers" id="NavigationDisplayServers" checked="checked"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationDisplayServers" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="DisplayServersList">Mostrar los servidores en una lista</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_DisplayServersList" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Mostrar los servidores en una lista en lugar de una caja desplegable.</small></th><td><span class="checkbox"><input type="checkbox" name="DisplayServersList" id="DisplayServersList"></span><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#DisplayServersList" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_databases" style="display: none;">
+<legend>Bases de datos</legend>
+    <p>Opciones para visualizar las bases de datos.</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationTreeDisplayDbFilterMinimum">Número mínimo de bases de datos a mostrar en la ventana de filtro de bases de datos</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeDisplayDbFilterMinimum" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDbSeparator">Separador de árbol de base de datos</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cadena que separa bases de datos en diferentes niveles de árbol.</small></th><td><input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeDbSeparator" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tables" style="display: none;">
+<legend>Tablas</legend>
+    <p>Opciones para visualizar las tablas.</p>
+<table class="pma-table" width="100%" cellspacing="0">
+<tbody><tr><th><label for="NavigationTreeDefaultTabTable">Destino para el icono de acceso rápido</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><select class="w-75" name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable"><option value="structure" selected="selected">Estructura</option><option value="sql">SQL</option><option value="search">Buscar</option><option value="insert">Insertar</option><option value="browse">Examinar</option></select><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeDefaultTabTable" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeDefaultTabTable2">Objetivo para el segundo icono de acceso rápido</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><select class="w-75" name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2"><option value="" selected="selected"></option><option value="structure">Estructura</option><option value="sql">SQL</option><option value="search">Buscar</option><option value="insert">Insertar</option><option value="browse">Examinar</option></select><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeDefaultTabTable2" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableSeparator">Separador de árbol de tablas</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span><small>Cadena que separa tablas en diferentes niveles de árbol.</small></th><td><input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeTableSeparator" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr><tr><th><label for="NavigationTreeTableLevel">Profundidad máxima del árbol de tablas</label><span class="doc"><a href="http://localhost/phpmyadmin/doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="Documentación" alt="Documentación" class="icon ic_b_help"></a>
+</span></th><td><input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1"><a class="restore-default hide" href="http://localhost/phpmyadmin/index.php?route=/database/structure&amp;server=1&amp;db=dbdisney#NavigationTreeTableLevel" title="Restaurar valor predeterminado" style="display: inline-block; opacity: 0.25;"><img src="./localhost _ localhost_3306 _ dbdisney _ phpMyAdmin 5.1.1_files/dot.gif" title="" alt="" class="icon ic_s_reload" style="display: none;"></a></td></tr></tbody></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+    if (typeof configInlineParams === 'undefined' || !Array.isArray(configInlineParams)) {
+        configInlineParams = [];
+    }
+    configInlineParams.push(function () {
+        registerFieldValidator('FirstLevelNavigationItems', 'validatePositiveNumber', true);
+registerFieldValidator('NavigationTreeDisplayItemFilterMinimum', 'validatePositiveNumber', true);
+registerFieldValidator('NumRecentTables', 'validateNonNegativeNumber', true);
+registerFieldValidator('NumFavoriteTables', 'validateNonNegativeNumber', true);
+registerFieldValidator('NavigationWidth', 'validateNonNegativeNumber', true);
+registerFieldValidator('MaxNavigationItems', 'validatePositiveNumber', true);
+registerFieldValidator('NavigationTreeTableLevel', 'validatePositiveNumber', true);
+$.extend(Messages, {
+	'error_nan_p': '¡No es un número positivo!',
+	'error_nan_nneg': '¡No es un número no-negativo!',
+	'error_incorrect_port': '¡No es un número de puerto válido!',
+	'error_invalid_value': '¡Valor incorrecto!',
+	'error_value_lte': '¡El valor debe ser igual o menor que %s!'});
+$.extend(defaultValues, {
+	'ShowDatabasesNavigationAsTree': true,
+	'NavigationLinkWithMainPanel': true,
+	'NavigationDisplayLogo': true,
+	'NavigationLogoLink': 'index.php',
+	'NavigationLogoLinkWindow': ['main'],
+	'NavigationTreePointerEnable': true,
+	'FirstLevelNavigationItems': '100',
+	'NavigationTreeDisplayItemFilterMinimum': '30',
+	'NumRecentTables': '10',
+	'NumFavoriteTables': '10',
+	'NavigationWidth': '240',
+	'MaxNavigationItems': '50',
+	'NavigationTreeEnableGrouping': true,
+	'NavigationTreeEnableExpansion': true,
+	'NavigationTreeShowTables': true,
+	'NavigationTreeShowViews': true,
+	'NavigationTreeShowFunctions': true,
+	'NavigationTreeShowProcedures': true,
+	'NavigationTreeShowEvents': true,
+	'NavigationTreeAutoexpandSingleDb': true,
+	'NavigationDisplayServers': true,
+	'DisplayServersList': false,
+	'NavigationTreeDisplayDbFilterMinimum': '30',
+	'NavigationTreeDbSeparator': '_',
+	'NavigationTreeDefaultTabTable': ['structure'],
+	'NavigationTreeDefaultTabTable2': [''],
+	'NavigationTreeTableSeparator': '__',
+	'NavigationTreeTableLevel': '1'});
+    });
+    if (typeof configScriptLoaded !== 'undefined' && configInlineParams) {
+        loadInlineConfig();
+    }
+</script>
+</div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Aplicar</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancelar</button></div></div></div><div class="ui-widget-overlay ui-front" style="z-index: 800;"></div></body></html>

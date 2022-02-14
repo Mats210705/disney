@@ -21,11 +21,11 @@ import java.util.List;
 public class PeliculaoSerie implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pelicula_serie_id")
     private Long Id;
 
-    @Column(nullable = false)
+    @Column(name = "imagen_url", nullable = false)
     private String imagenUrl;
 
     @Column(nullable = false)
@@ -37,7 +37,7 @@ public class PeliculaoSerie implements Serializable {
     @Column(name = "calificacion", nullable = false)
     private Integer calificacion;
 
-    private boolean deleted = Boolean.FALSE;
+
 
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
@@ -48,6 +48,8 @@ public class PeliculaoSerie implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "personaje_id")
     )
     private List<Personaje> personajes = new ArrayList<>();
+    public void addPersonaje(){
+}
 
 
     @ManyToMany(cascade = {

@@ -16,7 +16,7 @@ import java.util.List;
 @Table(name="genero")
 public class Genero implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long id;
     @Column(nullable = false, length = 30)

@@ -39,7 +39,7 @@ public interface Services<T, E> { //generic se indica que va a ser de algun tipo
      * @param id
      * @return
      */
-    GeneroDTO remove(Long id); //eliminar
+    void remove(Long id); //eliminar
 
     /**
      * @param entity

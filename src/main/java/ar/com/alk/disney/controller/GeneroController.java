@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -21,11 +22,11 @@ public class GeneroController {
 
     //getAll
     @GetMapping({"/", ""})
-    public ResponseEntity getGenerosMethod() {
-        List<GeneroDTO> generos = generoServices.getAll();
+    public ResponseEntity getGenero(){
+        List<GeneroDTO> genero =generoServices.getAll();
         return ResponseEntity
                 .ok()
-                .body(generos);
+                .body(genero);
 
     }
 

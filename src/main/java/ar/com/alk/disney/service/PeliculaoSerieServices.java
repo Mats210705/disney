@@ -19,7 +19,7 @@ import java.util.Optional;
 @Service
 public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, PeliculaoSerie> {
 
-    @Autowired
+
     private PeliculaoSerieMapper peliculaoSerieMapper = PeliculaoSerieMapper.MAPPER;
     @Autowired
     private BusinessLogicExceptionComponent logicExceptionComponent;
@@ -30,8 +30,7 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
     private PeliculaoSerieRepository peliculaoSerieRepository;
     @Autowired
     private PersonajeRepository personajeRepository;
-    @Autowired
-    private PersonajeRepository generoRepository;
+
 
     @Override
     public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto) {
@@ -42,14 +41,14 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
 
     public PeliculaoSerieDTO createNew(PeliculaoSerieDTO dto, Long id) {
-        List<Personaje> personajes = new ArrayList<>();
-        // Personaje personaje = personajeRepository
-        //       .findById(id)
-        //    .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
+
+        Personaje personaje = personajeRepository
+                .findById(id)
+                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", id));
 
         PeliculaoSerie peliculaoSerieToSave = peliculaoSerieMapper.toEntity(dto, context);
 
-          peliculaoSerieToSave.setPersonajes(personajes);
+        peliculaoSerieToSave.setPersonajes(personaje);//requiere de una Lista
 
         peliculaoSerieRepository.save(peliculaoSerieToSave);
 
@@ -66,11 +65,12 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
         List<PeliculaoSerie> peliculaSerieList = peliculaoSerieRepository.findAll();// => select * from
 
         // convertir esa lista de DAO a una lista de DTO
+        //List<D> toDTO(List<E> entityList, @Context AvoidingMappingContext context);
         List<PeliculaoSerieDTO> peliculasoseries = peliculaoSerieMapper.toDTO(peliculaSerieList, context);
         return peliculasoseries;
     }
 
-    //Listar por parametros --Deberá mostrar solamente los campos imagen, título y fecha de creación
+
 
 
     //listar por Id
@@ -89,22 +89,36 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
 
     }
 
-    //Actualizar
     @Override
     public PeliculaoSerieDTO update(PeliculaoSerieDTO dto, Long id) {
-        // verifico si el id existe en la base de datos
-        Optional<PeliculaoSerie> peliculaoSerieOptional = peliculaoSerieRepository.findById(id);
 
-        PeliculaoSerie peliculaoSerieById = peliculaoSerieOptional
-                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
 
-        mergeData(peliculaoSerieById, dto);
+        return null;
+    }
 
-        peliculaoSerieRepository.save(peliculaoSerieById);
+    //Actualizar
 
-        PeliculaoSerieDTO peliculaoSerieUpdated = peliculaoSerieMapper.toDTO(peliculaoSerieById, context);
+    public PeliculaoSerieDTO update(PeliculaoSerieDTO dto, Long personajeId, Long peliculaoSerieId) {
 
-        return peliculaoSerieUpdated;
+     PeliculaoSerie peliculaoSerieByIdFromDB=peliculaoSerieRepository.findById(peliculaoSerieId)
+             .orElseThrow(()->logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", peliculaoSerieId));
+
+
+      Personaje PersonajeByIdFromDB=personajeRepository.findById(personajeId)
+                .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("Personaje", personajeId));
+
+
+     peliculaoSerieByIdFromDB.setPersonajes(PersonajeByIdFromDB);//me dice que requiere de una lista
+
+        mergeData(peliculaoSerieByIdFromDB, dto);
+
+        peliculaoSerieRepository.save(peliculaoSerieByIdFromDB);
+
+        PeliculaoSerieDTO peliculaoserieUpdated = peliculaoSerieMapper.toDTO(peliculaoSerieByIdFromDB, context);
+
+        return peliculaoserieUpdated;
+
+
     }
 
     //borrar all
@@ -113,7 +127,7 @@ public class PeliculaoSerieServices implements Services<PeliculaoSerieDTO, Pelic
         Optional<PeliculaoSerie> peliculaoSerieByIdToDelete = peliculaoSerieRepository.findById(id);
         PeliculaoSerie peliculaoSerie = peliculaoSerieByIdToDelete
                 .orElseThrow(() -> logicExceptionComponent.getExceptionEntityNotFound("PeliculaoSerie", id));
-       peliculaoSerieRepository.delete(peliculaoSerie);
+        peliculaoSerieRepository.delete(peliculaoSerie);
     }
 
 

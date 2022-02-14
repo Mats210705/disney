@@ -37,11 +37,11 @@ public class PeliculaoSerieDTO implements Serializable {
     @Pattern(regexp = "[1,2,3,4,5]", message = "Calificacion contiene caracteres invalidos")
     private Integer calificacion;
 
-    @JsonIgnoreProperties({"peliculaoSeries"})
+   /* @JsonIgnoreProperties({"peliculaoSeries"})
     private GeneroDTO genero;
 
     @JsonIgnoreProperties({"peliculaoSeries"})
-    private GeneroDTO personaje;
+    private GeneroDTO personaje;*/
 
 
 
